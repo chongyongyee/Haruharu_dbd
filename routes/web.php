@@ -33,6 +33,7 @@ Route::get('thankyou', [App\Http\Controllers\Frontend\FrontendController::class,
 Route::middleware(['auth'])->group(function(){
     Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
     Route::get('checkout', [App\Http\Controllers\Frontend\CheckoutController::class, 'index']);
+    Route::get('orders', [App\Http\Controllers\Frontend\OrderController::class, 'index']);
 });
 
 
