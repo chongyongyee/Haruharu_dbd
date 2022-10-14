@@ -20,6 +20,7 @@ class Order extends Model
         'postcode',
         'address',
         'status_message',
-        'paymentId'
+        'paymentId',
+        'payment_mode'
     ];
 }
