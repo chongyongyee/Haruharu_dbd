@@ -30,12 +30,6 @@
             <span class="material-symbols-outlined">bar_chart</span> Category
           </li>
         </a>
-<!-- 
-        <a href="{{ url('admin/size') }}">        
-          <li class="sideNavbar-list-item">
-            <span class="material-symbols-outlined">straighten</span> Size
-          </li>
-        </a> -->
 
         <a href="{{ url('admin/products') }}">
           <li class="sideNavbar-list-item">
