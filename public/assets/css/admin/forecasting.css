@@ -1,0 +1,47 @@
+table{
+    table-layout: fixed;
+    width: 100%; 
+    line-height: 1.8;  
+    text-align: left;  
+    color: black;
+    margin-top: 10px;
+    padding: 8%;
+  }
+
+table td{
+    padding: 8px;
+}
+
+#product_type{
+    width: 57%;
+    height: 30px;
+}
+
+input[type="date"]
+{
+    width: 25%;
+    height: 30px;
+}
+
+input[type="number"]{
+    width: 55%;
+    height: 30px;
+}
+
+.btnForecast {
+    width: 50%;
+    margin-left: 20%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background:  #21232d;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.btnForecast:hover {
+    background: #aaa;
+    cursor: pointer;
+}
+

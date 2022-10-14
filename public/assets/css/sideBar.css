@@ -1,0 +1,90 @@
+/* ---------- SIDE NAV BAR ---------- */
+
+#sideNavbar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #21232d;
+    color: #9799ab;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  .sideNavbar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .sideNavbar-title > span {
+    display: none;
+  }
+  
+  .sideNavbar-brand {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .sideNavbar-list,
+  .btnDropDown {
+    padding: 0;
+    margin-top: 10px;
+    list-style-type: none;
+  }
+  
+  .btnDropDown{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none; 
+    width: 100%;
+    text-align: left;    
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+  
+  .sideNavbar-list:link,
+  .btnDropDown:link{
+    text-decoration: none;
+  }
+  
+  .sideNavbar-list-item{
+    padding: 20px 20px 20px 20px;
+  }
+  
+  .sideNavbar-list-item:hover,
+  .btnDropDown:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  .sideNavbar-responsive {
+    display: inline !important;
+    position: absolute;
+  }
+  
+  a, .btnDropDown{
+    text-decoration: none;
+    color: #9799ab;
+  }
+  
+  
+  /* Dropdown content (hidden by default)*/
+  .dropdown-content {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+    
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  

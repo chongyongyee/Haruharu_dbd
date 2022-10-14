@@ -1,0 +1,16 @@
+tbody{
+    text-align: center;
+    line-height: 1.8;
+}
+
+.fa-plus{
+    color: black;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btnViewSales:hover{
+    color: #21232d;
+    font-weight: 450;
+}

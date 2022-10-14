@@ -1,0 +1,113 @@
+
+
+/* body {
+    font-family: 'Work Sans', sans-serif;
+    background-color:  #eee;
+} */
+
+
+.faq-heading{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 22px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.faq-heading::after{
+    content: "";
+    height: 3px;
+    width: 325px;
+    background-color: #222;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hr-line {
+    width: 60%;
+    margin: auto;
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    font-size: 14px;
+}
+
+.faq-body {
+    margin: auto;
+    width: 50%;
+    padding: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    background-color:  white;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.subtitle{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #d0e3ed;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d0e3ed;
+  }
+

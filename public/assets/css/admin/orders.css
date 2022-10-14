@@ -1,0 +1,180 @@
+/*nav bar*/
+nav {
+    display: flex;
+    justify-content: space-around;
+   /* align-items: center;*/
+    min-height: 8vh;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    float: left;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .nav-links a:hover:not(.open) {
+    color: #213715;
+  }
+
+  .nav-links li a.open {
+    color: #213715;
+    /*text-decoration: underline #213715 3px;*/
+    padding-bottom: 8px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    width: fit-content;
+  }
+
+
+.btnEdit:hover{
+    color: #21232d;
+    font-weight: 450;
+    cursor: pointer;
+  }
+  
+  .table_orders td{
+      text-align: center;
+      line-height: 1.8;
+  }
+  
+  .table_orders img{
+      width: 200px;
+      height: auto;
+  }
+  
+
+  /* Modal View */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 8;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+      margin: 50px auto;
+      border: 1px solid #999;
+      width: 60%;
+    }
+     
+    .orders-form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #f5f5f5;
+      background: #eee;
+      font-family: "Montserrat", sans-serif;
+         
+    }
+  
+    .orders-form h2{
+      text-align: center; 
+    }
+    
+    
+    .orders-form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background:  #21232d;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+    }
+  
+    .orders-form img{
+      width: 150px;
+      height: auto;
+    }
+  
+   .orders-form table{
+      table-layout: fixed;
+      width: 100%; 
+      line-height: 1.8;  
+      text-align: left;  
+      color: black;
+      margin-bottom: 10px;
+      
+    }
+    
+    button:hover {
+      background: #aaa;
+    }
+    
+    .close {
+      color: #21232d;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #aaa;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    button.button {
+      background: none;
+      border-top: none;
+      outline: none;
+      border-right: none;
+      border-left: none;
+      border-bottom:  #21232d 1px solid;
+      padding: 0 0 3px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button.button:hover {
+      border-bottom: #21232d 1px solid;
+      color: #21232d;
+    }
+
+    /*Drop Down for status*/
+    select {
+        width: 50%;
+        padding: 10px;
+        background-color: #eee;
+        margin-bottom: 20px;
+        border: 1px solid #21232d;
+        outline: none;
+        font-size: 14px;
+      }
+    
+      optgroup{
+        font-size: 14px;  
+        line-height: 0.8;  
+      }
+  
+    /*Card Orders*/
+    .cardOrders {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 25px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      border: 1px solid #d2d2d3;
+      border-radius: 5px;
+      box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+      border-left: 7px solid #213715;
+    }
+   
+  

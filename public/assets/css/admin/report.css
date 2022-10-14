@@ -1,0 +1,131 @@
+  
+  .row {
+    display: flex;
+    margin-left:30px;
+    margin-right:10px;
+    margin-top: 100px;
+  }
+  
+  .sales_table{
+    width: 100%;
+
+  }
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+  
+
+#btnToday,
+#btnYest,
+#btnCurrentMonth,
+#btnCurrentYear{
+    display: block;
+    width: 250%;
+    border-style: ridge;
+    background-color: #eee;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: -25px;
+}
+
+#btnToday:hover,
+#btnYest:hover,
+#btnCurrentMonth:hover,
+#btnCurrentYear:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+table th, td{
+    padding: 10px;
+}
+
+input[type="date"]
+{
+    width: 200px;
+    height: 30px;
+}
+
+#btnSearch {
+    width: 74%;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background:  #21232d;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+#btnSearch:hover {
+    background: #aaa;
+    cursor: pointer;
+}
+
+
+/* Report Table*/
+#report_table {
+  display: none;
+  font-family: "Monserrat" sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#report_table td, #report_table th {
+  border: none;
+  
+}
+
+
+.sales_table tr:nth-child(even),
+.expense_table tr:nth-child(even){
+  background-color: #e1e1e1;
+}
+
+
+.sales_table th,
+.expense_table th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color:  #21232d;
+  color: white;
+  font-size: 16px;
+  
+}
+
+.expense_table{
+  width: 100%;
+}
+
+.total{
+  width: 26%;
+  border: none;  
+}
+
+/*PDF ICON*/
+#pdfIcon{
+  font-size: 40px;
+  border: none;
+}
+
+#pdfIcon:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.pdf-business{
+  text-align: right;
+  width: 400%;
+}
+
+.pdf-stock{
+  text-align: right;
+  width: 233%;
+}

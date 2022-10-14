@@ -1,0 +1,47 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    /* background-color:  #eee; */
+}
+
+.logoPic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 30%;
+}
+
+
+.about-heading{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 22px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.about-heading::after{
+    content: "";
+    height: 3px;
+    width: 325px;
+    background-color: #222;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+.about-text{
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 2;
+    
+}
+
+footer{
+    text-align: center;
+}
