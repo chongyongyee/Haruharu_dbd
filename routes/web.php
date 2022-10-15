@@ -43,6 +43,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     //dashboard
      Route::get('dashboard',[App\Http\Controllers\Admin\DashboardController::class,'index']);
 
+     //webiste
+     Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class,'index']);
+
      //Supplier 
     Route::controller(App\Http\Controllers\Admin\SupplierController::class)->group(function(){
         Route::get('/supplier','index');
@@ -86,8 +89,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('products/{productId}/delete','destroy');
         //delete img
         Route::get('product-image/{productImageId}/delete', 'destroyImage');
-        // Route::post('product-size/{prodSize_id}', 'updateProdSizeQty');
-        // Route::get('product-size/{prodSize_id}/delete', 'deleteProdSize');
         
 
     });
@@ -97,6 +98,11 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/orders','index');
         Route::get('/orders/{orderId}','show');
         Route::put('/orders/{orderId}','updateStatus');
+
+        //generate and view invoice
+        Route::get('/invoice/{orderId}','viewInvoice');
+        Route::get('/invoice/{orderId}/generate','generateInvoice');
+
     });
 
     //Sales
@@ -113,6 +119,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::put('/sliders/{slider}','update');
         Route::get('sliders/{slider}/delete','destroy');
     });
+
 
 
 });

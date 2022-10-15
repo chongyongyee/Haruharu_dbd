@@ -69,6 +69,12 @@
         </li>
       </a>
 
+      <a href="{{ url('admin/sliders') }}">
+        <li class="sideNavbar-list-item">
+          <span class="material-symbols-outlined">present_to_all</span> Home Slider
+        </li>
+      </a>
+
       <button class="btnDropDown">
           <li class="sideNavbar-list-item">
             <span class="material-icons-outlined">poll</span> Reports <i class="fa fa-caret-down"></i>
@@ -101,9 +107,10 @@
         </li>
       </a>
 
-      <a href="{{ url('admin/sliders') }}">
+
+      <a href="{{ url('/') }}">
         <li class="sideNavbar-list-item">
-          <span class="material-symbols-outlined">present_to_all</span> Home Slider
+          <span class="material-symbols-outlined">language</span> Website
         </li>
       </a>
       
