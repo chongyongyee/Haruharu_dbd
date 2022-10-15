@@ -49,7 +49,7 @@
                                 <th>Username</th>
                                 <th>Payment Method</th>
                                 <th>Ordered Date</th>
-                                <th>Status Message</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>   
                         </thead>

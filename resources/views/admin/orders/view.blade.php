@@ -7,6 +7,10 @@
 <div class="row">
     <div class="col-md-12">
 
+    @if(session('message'))
+        <div class="alert alert-success mb-3"> {{ session('message') }}</div>
+    @endif
+
         <div class="card">
             <div class="card-header">
                 <h3>Orders Details</h3>
@@ -98,6 +102,38 @@
 
                     </div>
 
+            </div>
+        </div>
+
+        <div class="card border mt-3">
+            <div class="card-body">
+                <h4>Order Process (Order Status Updates)</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-md-5">
+                        <form action="{{ url('admin/orders/'.$order->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+
+                            <label>Update Your Order Status</label>
+                            <div class="input-group">
+                                <select name="order_status" class="form-select">
+                                    <option value="" selected="true" default="true" disabled="disabled">Select Order Status</option>
+                                    <option value="in progress" {{Request::get('status') == 'in-progress' ? 'selected': ''}}>In Progress</option>
+                                    <option value="pending" {{Request::get('status') == 'pending'  ? 'selected': ''}}>Pending</option>
+                                    <option value="completed" {{Request::get('status') == 'completed'  ? 'selected': ''}}>Completed</option>
+                                    <option value="out-for-delivery" {{Request::get('status') == 'out-for-delivery'  ? 'selected': ''}}>Out for delivery</option>
+                                </select>  
+                                <button type="submit" class="btn btn-primary text-white" >Update</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-7">
+                        <br/>
+                        <h5 class="mt-1 float-end">Current Order Status: <span class="text-uppercase text-red">{{ $order->status_message}}</span></h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
