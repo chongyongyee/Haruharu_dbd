@@ -25,6 +25,9 @@
     <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet">
 
+     <!-- Exzoom Product Images -->
+     <link href="{{ asset('assets/exzoom/jquery.exzoom.css') }}" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <!-- Default theme -->
@@ -59,6 +62,7 @@
     </script>
 
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/exzoom/jquery.exzoom.js') }}"></script>
 
     @yield('scripts')
 
