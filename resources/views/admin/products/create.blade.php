@@ -79,6 +79,11 @@
                                     <input type="text" name="sellingPrice" class="form-control"/>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label>Trending</label>
+                                    <input type="checkbox" name="trending" style="width: 25px; height:25px;"/>
+                                </div>
+
                             </div>
                             
                         </div>

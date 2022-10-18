@@ -56,6 +56,10 @@ class ProductFormRequest extends FormRequest
                 'between:0,9999999999.99' 
             ],
 
+            'trending'=>[
+                'nullable'
+            ],
+
             'image'=>[
                 'nullable',
                 //'image|mimes:jpeg,png,jpg'

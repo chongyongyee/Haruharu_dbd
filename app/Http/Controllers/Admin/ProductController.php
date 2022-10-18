@@ -42,7 +42,8 @@ class ProductController extends Controller
             'productQuantity' =>$validatedData['productQuantity'],
             'productOriginalPrice' =>$validatedData['originalPrice'],
             'productSellingPrice' =>$validatedData['sellingPrice'],
-            'productDescription' =>$validatedData['description']
+            'productDescription' =>$validatedData['description'],
+            'trending' =>$request->trending == true ? '1':'0'
 
         ]);
 
@@ -67,16 +68,6 @@ class ProductController extends Controller
             }
         }
 
-        // if($request->size){
-        //     foreach($request->size as $key => $size){
-        //         $product->productSize()->create([
-        //             'productId' => $product->productId,
-        //             'sizeId' => $size,
-        //             'quantity' => $request->quantity[$key] ?? 0
-        //         ]);
-        //     }
-        // }
-
 
         return redirect('/admin/products')->with('message','Product Added Successfully');
         
@@ -89,10 +80,6 @@ class ProductController extends Controller
         $category = Category::all();
         $product = Product::findOrFail($productId);
 
-        //$product_size = $product->productSize->pluck('sizeId')->toArray();
-        //$size = Size::whereNotIn('id',$product_size)->get();
-
-        // return view('admin.products.edit',compact('category','product','size'));
         return view('admin.products.edit',compact('category','product'));
     }
 
@@ -109,7 +96,8 @@ class ProductController extends Controller
                 'productQuantity' =>$validatedData['productQuantity'],
                 'productOriginalPrice' =>$validatedData['originalPrice'],
                 'productSellingPrice' =>$validatedData['sellingPrice'],
-                'productDescription' =>$validatedData['description']
+                'productDescription' =>$validatedData['description'],
+                'trending' =>$request->trending == true ? '1':'0'
     
             ]);
 
@@ -132,16 +120,6 @@ class ProductController extends Controller
                     ]);
                 }
             }
-
-            // if($request->size){
-            //     foreach($request->size as $key => $size){
-            //         $product->productSize()->create([
-            //             'productId' => $product->productId,
-            //             'sizeId' => $size,
-            //             'quantity' => $request->quantity[$key] ?? 0
-            //         ]);
-            //     }
-            // }
 
 
             return redirect('/admin/products')->with('message','Product Updated Successfully');
@@ -183,21 +161,5 @@ class ProductController extends Controller
         return redirect()->back()->with('message', 'Product Deleted');
     }
 
-    // public function updateProdSizeQty(Request $request, $prodSize_id) 
-    // {
-    //     $productSizeData = Product::findOrFail($request->productId)
-    //                         ->productSize()->where('id',$prodSize_id)->first();
-    //     $productSizeData->update([
-    //         'quantity' => $request->qty
-    //     ]);
-    //     return response()->json(['message'=> 'Product Size Quantity Updated']);
-    // }
-
-    // public function deleteProdSize($prodSize_id)
-    // {
-    //     $prodSize = ProductSize::findOrFail($prodSize_id);
-    //     $prodSize->delete();
-    //     return response()->json(['message'=>'Product Size Deleted']);
-    // }
 
 }

@@ -19,6 +19,12 @@
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/faqs.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/about.css') }}" rel="stylesheet">
+
+
+    <!-- owl carousel -->
+    <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <!-- Default theme -->
@@ -52,6 +58,7 @@
         
     </script>
 
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 
     @yield('scripts')
 

@@ -20,7 +20,8 @@ class Product extends Model
         'productQuantity',
         'productOriginalPrice',
         'productSellingPrice',
-        'productDescription'
+        'productDescription',
+        'trending'
     ];
 
     public function category()

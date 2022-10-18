@@ -86,6 +86,11 @@
                                     <label>Selling Price</label>
                                     <input type="text" name="sellingPrice" value="{{ $product->productSellingPrice }}" class="form-control"/>
                                 </div>
+
+                                <div class="mb-3">
+                                    <label>Trending</label>
+                                    <input type="checkbox" name="trending" {{ $product->trending == '1' ? 'checked':'' }} style="width: 25px; height:25px;"/>
+                                </div>
                                 
                                 
                             </div>
