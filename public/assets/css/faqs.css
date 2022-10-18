@@ -68,10 +68,9 @@
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
     padding: 0 18px;
-    background-color: white;
+    background-color: #F9F9F9;
     display: none;
     overflow: hidden;
-    background-color:  white;
 }
 
 .faq-page:after {
@@ -95,19 +94,19 @@
     margin-top: 20px;
 }
 
-table {
+.faq-body table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
   
-  td, th {
+.faq-body td, th {
     border: 1px solid #d0e3ed;
     text-align: left;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
+.faq-body tr:nth-child(even) {
     background-color: #d0e3ed;
   }
 
