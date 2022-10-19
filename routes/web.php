@@ -27,6 +27,7 @@ Route::controller(App\Http\Controllers\Frontend\FrontendController::class)->grou
     Route::get('/collections/{categoryId}', 'products');
     Route::get('/collections/{categoryId}/{productId}', 'productView');
     Route::get('/new-arrivals', 'newArrival');
+    Route::get('search', 'searchProducts');
 });
 
 
