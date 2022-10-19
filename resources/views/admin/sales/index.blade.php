@@ -48,17 +48,23 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @forelse($orders as $item)
                             <tr>
                                 <td></td>
+                                <td>{{ $item->fullname }}</td>
+                                <td>{{ $item->id }}</td>
+                                <td>{{$item->updated_at->format('d-m-Y')}}</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$item->status_message}}</td>
                                 <td>                                    
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="7">No Sales History</td>
+                                </tr>
+                            @endforelse
                         </tbody>
 
                     </table>
@@ -70,7 +76,7 @@
     </div>
 </div>
 
-@push('script')
+<!-- @push('script')
     <script>
         window.addEventListener('close-modal', event => {
 
@@ -79,7 +85,7 @@
         });
 
     </script>
-@endpush
+@endpush -->
 @endsection
 
 
