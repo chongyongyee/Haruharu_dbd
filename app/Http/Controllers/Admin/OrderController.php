@@ -14,9 +14,7 @@ class OrderController extends Controller
 
     public function index(Request $request)
     {
-        // $todayDate = Carbon::now();
-        // $orders = Order::whereDate('created_at',$todayDate)->paginate(10);
-
+        
         $todayDate = Carbon::now()->format('Y-m-d');
         $orders = Order::when($request->date != null, function($query) use ($request){
 

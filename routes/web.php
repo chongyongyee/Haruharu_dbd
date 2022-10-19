@@ -63,10 +63,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::put('/supplier/{supplier}','update');
     });
 
-    //Customer
-    Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class,'index']);
-
-  
+     
     //Expenses 
     Route::controller(App\Http\Controllers\Admin\ExpensesController::class)->group(function(){
         Route::get('/expenses','index');

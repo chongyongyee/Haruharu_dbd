@@ -14,8 +14,10 @@ body {
 }
 
 
-.text-primary {
-  color: #666666;
+.text-dashboard {
+  color: black;
+  font-weight: bold;
+  font-size: small;
 }
 
 .text-blue {
@@ -118,6 +120,22 @@ body {
 
 .card:nth-child(4) {
   border-left: 7px solid #cc3c43;
+}
+
+.card:nth-child(5) {
+  border-left: 7px solid #cc863c;
+}
+
+.card:nth-child(6) {
+  border-left: 7px solid #3ccc6c;
+}
+
+.card:nth-child(7) {
+  border-left: 7px solid #673ccc;
+}
+
+.card:nth-child(8) {
+  border-left: 7px solid #3c9ccc;
 }
 
 .card > span {

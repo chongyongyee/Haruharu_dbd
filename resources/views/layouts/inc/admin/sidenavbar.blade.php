@@ -56,12 +56,6 @@
           <span class="material-icons-outlined">local_atm</span> Expenses
         </li>
       </a>
-      
-      <a href="{{ url('admin/customer') }}">
-        <li class="sideNavbar-list-item">
-          <span class="material-icons-outlined">person</span> Customers
-        </li>
-      </a>
 
       <a href="{{ url('admin/supplier') }}">
         <li class="sideNavbar-list-item">
