@@ -28,21 +28,7 @@
                         </p>
                     </div>
                 </div>
-                <hr class="hr-line">
-                <div class="faq-two">
-                    <!-- question -->
-                    <h1 class="faq-page">What comes with my nail purchase?</h1>
-                    <!-- answer -->
-                    <div class="faq-body">
-                        <ul>
-                            <li>Press On Nails</li>
-                            <li>Nail File</li>
-                            <li>Alcohol Wipes x2</li>
-                            <li>Adhesive tabs x1pc or Nail Glue x1</li>
-                            <li>Wooden Stick</li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <hr class="hr-line">
                 <div class="faq-three">
                     <!-- question -->
@@ -137,7 +123,7 @@
             </section>
 
             <section class="faq-container">
-                <h1 class="subtitle"> Sizing Chart</h1>
+                <h1 class="subtitle"> What's inside the box</h1>
                 <div class="faq-one">
                     <!-- question -->
                     <h1 class="faq-page">How to measure your size?</h1>
@@ -147,7 +133,8 @@
                             <li>Apply measuring tape or paper horizontally across the widest parts of your natural nails</li>
                             <li>Mark down each fingers measurement and choose the size</li>
                         </ul>
-                        <p>+-0.2cm are normally within the comfortable range(acceptable)</p>
+                        <!-- <p>+-0.2cm are normally within the comfortable range(acceptable)</p> -->
+                        <p style="font-weight: bold;">* Select the size that suitable for your nails</p>
                         <br>
                         <img src="{{ URL::to('/assets/img/IMG_7818.jpg') }}" alt="measurement" width="550" height="320">
                     </div>
@@ -155,42 +142,19 @@
                 <hr class="hr-line">
                 <div class="faq-two">
                     <!-- question -->
-                    <h1 class="faq-page">Size Chart</h1>
+                    <h1 class="faq-page">What comes with my nail purchase?</h1>
                     <!-- answer -->
                     <div class="faq-body">
-                        <table>
-                            <tr>
-                            <th>Size</th>
-                            <th>Thumb</th>
-                            <th>Index</th>
-                            <th>Middle</th>
-                            <th>Ring</th>
-                            <th>Pinky</th>
-                            </tr>
-                            <tr>
-                            <td>S</td>
-                            <td>1.5</td>
-                            <td>1.1</td>
-                            <td>1.2</td>
-                            <td>1.1</td>
-                            <td>0.9</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>1.6</td>
-                                <td>1.2</td>
-                                <td>1.3</td>
-                                <td>1.2</td>
-                                <td>1.0</td>
-                            </tr>
-                        </table>
-                        <br>
-                        <p> Choose the size based on the measurement you got from measurement guide</p>
-                        <br>
-                        <p>+-0.2cm are normally within the comfortable range(acceptable)</p>
+                        <ul>
+                            <li>Press On Nails x24pcs</li>
+                            <li>Nail File</li>
+                            <li>Alcohol Wipes x2</li>
+                            <li>Adhesive tabs x1pc or Nail Glue x1</li>
+                            <li>Wooden Stick</li>
+                        </ul>
                     </div>
                 </div>
-
+                
             </section>
 
         
