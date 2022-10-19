@@ -20,16 +20,23 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class,'index']);
-Route::get('/collections',[App\Http\Controllers\Frontend\FrontendController::class,'categories']);
-Route::get('/collections/{categoryId}',[App\Http\Controllers\Frontend\FrontendController::class,'products']);
-Route::get('/collections/{categoryId}/{productId}',[App\Http\Controllers\Frontend\FrontendController::class,'productView']);
+
+Route::controller(App\Http\Controllers\Frontend\FrontendController::class)->group(function(){
+    Route::get('/', 'index');
+    Route::get('/collections', 'categories');
+    Route::get('/collections/{categoryId}', 'products');
+    Route::get('/collections/{categoryId}/{productId}', 'productView');
+    Route::get('/new-arrivals', 'newArrival');
+});
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/faqs', [App\Http\Controllers\Frontend\FaqController::class, 'index']);
 Route::get('/aboutus', [App\Http\Controllers\Frontend\AboutUsController::class, 'index']);
 Route::get('thankyou', [App\Http\Controllers\Frontend\FrontendController::class, 'thankyou']);
 
+
+//Requires login to add to cart, payment
 Route::middleware(['auth'])->group(function(){
     Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
     Route::get('checkout', [App\Http\Controllers\Frontend\CheckoutController::class, 'index']);
@@ -38,6 +45,7 @@ Route::middleware(['auth'])->group(function(){
 });
 
 
+//admin route
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
     //dashboard

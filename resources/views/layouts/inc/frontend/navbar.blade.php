@@ -86,9 +86,6 @@
                             <a class="nav-link" href="{{ url('/new-arrivals') }}">New Arrivals</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Featured Products</a>
-                        </li>  
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/faqs') }}">FAQs</a>
                         </li>   
                         <li class="nav-item">

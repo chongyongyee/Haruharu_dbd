@@ -17,6 +17,12 @@ class FrontendController extends Controller
         return view('frontend.index', compact('sliders', 'trendingProducts'));
     }
 
+    public function newArrival()
+    {
+        $newArrivalProducts = Product::latest()->take(16)->get();
+        return view('frontend.pages.new-arrival', compact('newArrivalProducts'));
+    }
+
     public function categories()
     {
         $categories = Category::get();
