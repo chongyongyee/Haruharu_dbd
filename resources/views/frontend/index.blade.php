@@ -68,7 +68,7 @@
         </div>
         @if($trendingProducts)
             <div class="col-md-12">
-                <div class="owl-carousel owl-theme trending-product">
+                <div class="owl-carousel owl-theme products">
                     @foreach ($trendingProducts as $productItem)
                         <div class="item">
                             <div class="product-card">
@@ -114,15 +114,76 @@
         </div>
     </div>
 </div>
+
+<!-- New arrival -->
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h4>New Arrivals
+                <a href="{{ url('new-arrivals') }}" class="btn btn-primary float-end">View More</a>
+            </h4>
+            <div class="underline mb-4"></div>
+        </div>
+        @if($newArrivalProducts)
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme products">
+                    @foreach ($newArrivalProducts as $productItem)
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                        <label class="stock bg-danger">New</label>
+                                        
+                                    @if($productItem->productImages->count()> 0)
+                                        <a href="{{ url('/collections/'.$productItem->category->categoryId.'/'.$productItem->productId) }}">
+                                            <!-- get the first image of the product -->
+                                            <img src="{{ asset($productItem->productImages[0]->image) }}" alt="{{$productItem->productName}}">
+                                        </a>
+                                    @endif
+
+                                </div>
+
+                                <div class="product-card-body">
+                                    <h5 class="product-name">
+                                        <a href="{{ url('/collections/'.$productItem->category->categoryId.'/'.$productItem->productId) }}">
+                                                {{$productItem->productName}} 
+                                        </a>
+                                    </h5>
+
+                                    <div>
+                                        <span class="selling-price">RM{{$productItem->productSellingPrice}} </span>
+                                        <!-- <span class="original-price">{{$productItem->productOriginalPrice}}</span> -->
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <a href="{{ url('/collections/'.$productItem->category->categoryId.'/'.$productItem->productId) }}" class="btn btn1"> View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    @endforeach
+                </div>
+        @else
+                <div class="col-md-12">
+                    <h4>No New Arrivals Available</h4>
+                </div>
+            </div>
+        @endif
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @section('scripts')
 
 <script>
-    $('.trending-product').owlCarousel({
+    $('.products').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav:false,
+        dots:true,
         responsive:{
             0:{
                 items:1

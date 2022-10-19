@@ -27,6 +27,7 @@
     @livewireStyles
 </head>
 <body>
+    
     <div class="grid-container">
     @include('layouts.inc.admin.header')
     @include('layouts.inc.admin.sidenavbar')
