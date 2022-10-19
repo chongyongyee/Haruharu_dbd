@@ -21,12 +21,6 @@
             than wishing that every woman would gain their confidence while using Haruharu dbd</p>
       </div>
       <br>
-      <br>
-
-
-    <footer>
-      <p>@Haruharu_dbd</p>
-    </footer>
 
 
     </div>
