@@ -158,8 +158,6 @@
             {
                 Livewire.emit('transactionEmit', transaction.id);
             }
-
-            //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
             
           });
         }

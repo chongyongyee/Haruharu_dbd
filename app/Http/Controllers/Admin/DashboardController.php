@@ -29,6 +29,9 @@ class DashboardController extends Controller
         $totalCategory = Category::count();
         $totalExpense = Expenses::count();
 
+        $sales = Order::where('status_message', 'completed')->get();
+        $totalSales = $sales->count();
+
         $todayDate = Carbon::now()->format('d-m-Y');
         $thisMonth = Carbon::now()->format('m');
         $thisYear = Carbon::now()->format('Y');
@@ -37,6 +40,6 @@ class DashboardController extends Controller
         $thisMonthOrder = Order::whereMonth('created_at', $thisMonth)->count();
         $thisYearOrder = Order::whereYear('created_at', $thisYear)->count();
 
-        return view('admin.dashboard', compact('totalProducts', 'totalOrders','totalCategory', 'todayOrder', 'totalExpense', 'thisMonthOrder','thisYearOrder'));
+        return view('admin.dashboard', compact('totalProducts', 'totalOrders','totalCategory', 'todayOrder','totalSales', 'totalExpense', 'thisMonthOrder','thisYearOrder'));
     }
 }

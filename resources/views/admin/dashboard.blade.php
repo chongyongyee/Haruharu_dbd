@@ -25,7 +25,7 @@
         <div class="card">
           <div class="card-inner">
             <p class="text-dashboard">TODAY ORDERS</p>
-            <span class="material-icons-outlined text-red">local_atm</span>
+            <span class="material-icons-outlined text-red">shopping_cart</span>
           </div>
           <span class="text-primary font-weight-bold">{{ $todayOrder}}</span>
         </div>
@@ -33,7 +33,7 @@
         <div class="card">
           <div class="card-inner">
             <p class="text-dashboard">THIS MONTH ORDERS</p>
-            <span class="material-icons-outlined text-red">local_atm</span>
+            <span class="material-icons-outlined text-blue">local_mall</span>
           </div>
           <span class="text-primary font-weight-bold">{{ $thisMonthOrder}}</span>
         </div>
@@ -41,7 +41,7 @@
         <div class="card">
           <div class="card-inner">
             <p class="text-dashboard">THIS YEAR ORDERS</p>
-            <span class="material-icons-outlined text-red">local_atm</span>
+            <span class="material-icons-outlined text-orange">shopping_bag</span>
           </div>
           <span class="text-primary font-weight-bold">{{ $thisYearOrder}}</span>
         </div>
@@ -57,7 +57,7 @@
         <div class="card">
           <div class="card-inner">
             <p class="text-dashboard">CATEGORIES</p>
-            <span class="material-icons-outlined text-blue">inventory_2</span>
+            <span class="material-icons-outlined">category</span>
           </div>
           <span class="text-primary font-weight-bold">{{$totalCategory}}</span>
         </div>
@@ -67,7 +67,7 @@
             <p class="text-dashboard">SALES</p>
             <span class="material-icons-outlined text-orange">monetization_on</span>
           </div>
-          <span class="text-primary font-weight-bold">0</span>
+          <span class="text-primary font-weight-bold">{{$totalSales}}</span>
         </div>
 
         <div class="card">
