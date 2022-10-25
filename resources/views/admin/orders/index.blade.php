@@ -41,7 +41,7 @@
             <hr>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped" id="data-table">
                         <thead>
                             <tr>
                                 <th>Order ID</th>
@@ -89,3 +89,13 @@
    
       
 @endsection
+
+@push('script')
+<script>
+    $(function () {
+        var table = $('#data-table').DataTable({
+
+        });
+    });
+</script>
+@endpush

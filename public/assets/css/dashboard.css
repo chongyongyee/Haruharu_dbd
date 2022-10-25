@@ -94,7 +94,7 @@ body {
   margin: 20px 0;
 }
 
-.card {
+.cardDashboard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -106,54 +106,54 @@ body {
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 
-.card:first-child {
+.cardDashboard:first-child {
   border-left: 7px solid #246dec;
 }
 
-.card:nth-child(2) {
+.cardDashboard:nth-child(2) {
   border-left: 7px solid #f5b74f;
 }
 
-.card:nth-child(3) {
+.cardDashboard:nth-child(3) {
   border-left: 7px solid #367952;
 }
 
-.card:nth-child(4) {
+.cardDashboard:nth-child(4) {
   border-left: 7px solid #cc3c43;
 }
 
-.card:nth-child(5) {
+.cardDashboard:nth-child(5) {
   border-left: 7px solid #cc863c;
 }
 
-.card:nth-child(6) {
+.cardDashboard:nth-child(6) {
   border-left: 7px solid #3ccc6c;
 }
 
-.card:nth-child(7) {
+.cardDashboard:nth-child(7) {
   border-left: 7px solid #673ccc;
 }
 
-.card:nth-child(8) {
+.cardDashboard:nth-child(8) {
   border-left: 7px solid #3c9ccc;
 }
 
-.card > span {
+.cardDashboard > span {
   font-size: 20px;
   font-weight: 600;
 }
 
-.card-inner {
+.cardDashboard-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-inner > p {
+.cardDashboard-inner > p {
   font-size: 18px;
 }
 
-.card-inner > span {
+.cardDashboard-inner > span {
   font-size: 35px;
 }
 

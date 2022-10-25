@@ -20,7 +20,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
       <!-- Styles -->
-      <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">      
+      <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">     
+      <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">  
       <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/css/sideBar.css') }}">
    
@@ -49,6 +50,7 @@
 
     <!-- Custom JS -->
     <script type="text/javascript" src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/dropdown.js') }}"></script>
 
     @yield('scripts')

@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped" id="data-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -67,11 +67,6 @@
                             </tbody>
                     </table>    
 
-                    <!--Pagination-->
-                    <div>
-                        {{ $category->links() }}
-                    </div>
-
                 </div>
             </div>
 
@@ -85,6 +80,12 @@
 
             $('#deleteModal').modal('hide');
 
+        });
+
+        $(function () {
+            var table = $('#data-table').DataTable({
+
+            });
         });
 
     </script>

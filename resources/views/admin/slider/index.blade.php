@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped" id="data-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -56,13 +56,7 @@
                         </tbody>
 
                     </table>
-                    
-                    <!--Pagination-->
-                <div>
-                        {{ $sliders->links()}}
-                </div>
-
-                    
+                
                 </div>
             </div>
 
@@ -70,5 +64,14 @@
     </div>
 </div>
 
-
 @endsection
+
+@push('script')
+<script>
+    $(function () {
+        var table = $('#data-table').DataTable({
+
+        });
+    });
+</script>
+@endpush

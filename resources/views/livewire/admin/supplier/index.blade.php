@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped" id="data-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -90,5 +90,13 @@
 
         });
 
+        $(function () {
+            var table = $('#data-table').DataTable({
+
+            });
+        });
+
     </script>
+
+
 @endpush
