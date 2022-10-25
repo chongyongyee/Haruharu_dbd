@@ -9,27 +9,20 @@
 
         <div class="card">
             <div class="card-header">
-                <h4>Stock Report</h4>
+                <h4 class="text-primary">
+                    <i class="fa fa-shopping-cart text-dark"></i> Stock Report
+                    <a href="{{ url('admin/stockReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1">Download Report</a>
+                    <a href="{{ url('admin/stockReport/view') }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1">View Report</a>
+                </h4>
             </div>
 
             <div class="card-body">
                 <div class="row">
-
-                    <div class="col-md-3">
-                        <label>Date From: </label>
-                        <input type="date" name="dateFrom" class="form-control"/>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Date To: </label>
-                        <input type="date" name="dateTo" class="form-control"/>
-                    </div>
-                    <br>
-
                     <div class="table-responsive mt-3">
                         <table class="table table-bordered table-striped" id="data-table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>Product ID</th>
                                     <th>Product</th>
                                     <th>Price</th>
                                     <th>Stock Left</th>

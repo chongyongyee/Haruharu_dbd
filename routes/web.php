@@ -141,6 +141,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::controller(App\Http\Controllers\Admin\ReportController::class)->group(function(){
         Route::get('/businessReport','businessIndex');
         Route::get('/stockReport','stockIndex');
+        Route::get('/stockReport/view','viewStockReport');
+        Route::get('/stockReport/generate','generateStockReport');
     });
 
 

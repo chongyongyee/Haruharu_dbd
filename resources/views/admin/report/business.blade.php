@@ -22,11 +22,14 @@
                         <label>Date To: </label>
                         <input type="date" name="dateTo" class="form-control"/>
                     </div>
-                    </br>
-            
-                    
 
-                    <div class="table-responsive">
+                    <div class="col-md-6">
+                        <br/>
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                    <br/>
+
+                    <div class="table-responsive mt-3">
                         <table class="table table-bordered table-striped data-table">
                             <thead>
                                 <h5>Sales Report</h5>
