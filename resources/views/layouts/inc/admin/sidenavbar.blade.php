@@ -71,13 +71,13 @@
           </li>            
       </button>
       <div class="dropdown-content">
-        <a href="#">
+        <a href="{{ url('admin/businessReport') }}">
           <li class="sideNavbar-list-item">
             <span class="material-symbols-outlined">bar_chart</span> Business Report
           </li>
         </a>
 
-        <a href="#">
+        <a href="{{ url('admin/stockReport') }}">
           <li class="sideNavbar-list-item">
             <span class="material-symbols-outlined">inventory</span> Stock Report
           </li>

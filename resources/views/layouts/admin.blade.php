@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
       <!-- Styles -->
-      <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">      
       <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/css/sideBar.css') }}">
    
@@ -41,7 +41,8 @@
     <script src="{{ asset('assets/js/jquery-3.6.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-
+    
+    
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>

@@ -13,7 +13,7 @@
 
       <div class="main-cards">
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
               <p class="text-dashboard">ORDERS</p>
             <span class="material-icons-outlined text-green">add_shopping_cart</span>
@@ -22,23 +22,23 @@
         </div>
        
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">TODAY ORDERS</p>
             <span class="material-icons-outlined text-red">shopping_cart</span>
           </div>
-          <span class="text-primary font-weight-bold">{{ $todayOrder}}</span>
+          <span class="text-primary font-weight-bold">{{$todayOrder}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">THIS MONTH ORDERS</p>
             <span class="material-icons-outlined text-blue">local_mall</span>
           </div>
-          <span class="text-primary font-weight-bold">{{ $thisMonthOrder}}</span>
+          <span class="text-primary font-weight-bold">{{$thisMonthOrder}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">THIS YEAR ORDERS</p>
             <span class="material-icons-outlined text-orange">shopping_bag</span>
@@ -46,7 +46,7 @@
           <span class="text-primary font-weight-bold">{{ $thisYearOrder}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">PRODUCTS</p>
             <span class="material-icons-outlined text-blue">inventory_2</span>
@@ -54,7 +54,7 @@
           <span class="text-primary font-weight-bold">{{$totalProducts}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">CATEGORIES</p>
             <span class="material-icons-outlined">category</span>
@@ -62,7 +62,7 @@
           <span class="text-primary font-weight-bold">{{$totalCategory}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">SALES</p>
             <span class="material-icons-outlined text-orange">monetization_on</span>
@@ -70,7 +70,7 @@
           <span class="text-primary font-weight-bold">{{$totalSales}}</span>
         </div>
 
-        <div class="card">
+        <div class="cardDashboard">
           <div class="card-inner">
             <p class="text-dashboard">EXPENSES</p>
             <span class="material-icons-outlined text-red">local_atm</span>
