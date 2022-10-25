@@ -1,8 +1,4 @@
 
-<!-- Style -->
-<link href="{{ asset('assets/css/sideBar.css') }}" rel="stylesheet">
-
-<!-- Side Navigation bar -->
 <aside id="sideNavbar">
     <div class="sideNavbar-title">
       <div class="sideNavbar-brand">
@@ -32,7 +28,7 @@
         </a>
 
         <a href="{{ url('admin/products') }}">
-          <li class="sideNavbar-list-item">
+          <li class="sideNavbar-list-item ">
             <span class="material-symbols-outlined">inventory</span> Products
           </li>
         </a>
@@ -40,31 +36,31 @@
 
 
       <a href="{{ url('admin/sales') }}">
-        <li class="sideNavbar-list-item">
+        <li class="sideNavbar-list-item {{Request::is('admin/sales') ? 'active' :'' }}">
           <span class="material-icons-outlined">monetization_on</span> Sales
         </li>
       </a>
 
       <a href="{{ url('admin/orders') }}">
-        <li class="sideNavbar-list-item"> 
+        <li class="sideNavbar-list-item {{Request::is('admin/orders') ? 'active' :'' }}"> 
           <span class="material-icons-outlined">add_shopping_cart</span> Orders
         </li>
       </a>
 
       <a href="{{ url('admin/expenses') }}">
-        <li class="sideNavbar-list-item"> 
+        <li class="sideNavbar-list-item {{Request::is('admin/expenses') ? 'active' :'' }}"> 
           <span class="material-icons-outlined">local_atm</span> Expenses
         </li>
       </a>
 
       <a href="{{ url('admin/supplier') }}">
-        <li class="sideNavbar-list-item">
+        <li class="sideNavbar-list-item {{Request::is('admin/supplier') ? 'active' :'' }}">
           <span class="material-symbols-outlined">approval_delegation</span> Suppliers
         </li>
       </a>
 
       <a href="{{ url('admin/sliders') }}">
-        <li class="sideNavbar-list-item">
+        <li class="sideNavbar-list-item {{Request::is('admin/sliders') ? 'active' :'' }}">
           <span class="material-symbols-outlined">present_to_all</span> Home Slider
         </li>
       </a>
@@ -89,7 +85,7 @@
       </div>
       
 
-      <a href="#">
+      <a href="{{ url('/admin/dataAnalytics') }}">
         <li class="sideNavbar-list-item">
           <span class="material-symbols-outlined">trending_up</span> Data Analytics
         </li>
@@ -109,4 +105,4 @@
       </a>
       
     </ul>
-  </aside>
+</aside>

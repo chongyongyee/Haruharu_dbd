@@ -3,38 +3,32 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Order;
 use Illuminate\Support\Carbon;
 
 class SalesController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {   
+       
+        $sales= Order::where('status_message', 'completed')->get();
+        return view('admin.sales.index', compact('sales'));
+    }
+
+    public function show(int $orderId)
+    {
+        $order = Order::where('id',$orderId)->first();
+        if($order)
+        {
+            return view('admin.sales.view', compact('order'));
+        }
+        else
+        {
+            return redirect('admin/sales')->with('message', 'Order Id not found');
+        }
         
-        $orders = Order::when($request->status = 'Completed', function($query) use ($request){
 
-                        return $query->where('status_message', 'Completed');
-                    })                    
-                    ->paginate(10);
-
-
-        return view('admin.sales.index', compact('orders'));
     }
 
-    public function create(){
-        //
-    }
 
-    public function store(){
-        //
-    }
-
-    public function edit(){
-        //
-    }
-
-    public function update(){
-        //
-    }
 }

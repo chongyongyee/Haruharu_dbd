@@ -1,93 +1,88 @@
-@extends('layouts.admin')
+@extends ('layouts.admin')
 
-@section('title','Sales')
+@section('title', 'My Sales')
 
 @section('content')
 
-<div>
-    <!-- Modal Delete-->
-    <div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sales Delete</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+<div class="row">
+    <div class="col-md-12">
 
-                <form wire:submit.prevent="destroyExpenses">
-                    <div class="modal-body">
-                        <h6>Are you sure you want to delete?</h6>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Delete</button>
-                    </div>
-                </form>
+        <div class="card">
+            <div class="card-header">
+                <h3>Sales List</h3>
             </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Sales</h3>
+            <div class="card-body">
+
+            <!-- <form action="" method="GET">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label> Filter by Date</label>
+                        <input type="date" name="date" value="{{Request::get('date') ?? date('Y-m-d')}}" class="form-control"/>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label> Filter by status</label>
+                        <select name="status" class="form-select">
+                            <option value="">Select All Status</option>
+                            <option value="in progress" {{Request::get('status') == 'in-progress' ? 'selected': ''}}>In Progress</option>
+                            <option value="pending" {{Request::get('status') == 'pending'  ? 'selected': ''}}>Pending</option>
+                            <option value="completed" {{Request::get('status') == 'completed'  ? 'selected': ''}}>Completed</option>
+                            <option value="out-for-delivery" {{Request::get('status') == 'out-for-delivery'  ? 'selected': ''}}>Out for delivery</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <br/>
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
                 </div>
+            </form> -->
+            <hr>
 
-                <div class="card-body">
+                <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Customer Name</th>
                                 <th>Order ID</th>
-                                <th>Date</th>                            
-                                <th>Price</th>
-                                <th>Status</th>   
+                                <th>Tracking No</th>
+                                <th>Username</th>
+                                <th>Payment Method</th>
+                                <th>Ordered Date</th>
+                                <th>Status</th>
                                 <th>Action</th>
-                            </tr>
+                            </tr>   
                         </thead>
+
                         <tbody>
-                            @forelse($orders as $item)
-                            <tr>
-                                <td></td>
-                                <td>{{ $item->fullname }}</td>
-                                <td>{{ $item->id }}</td>
-                                <td>{{$item->updated_at->format('d-m-Y')}}</td>
-                                <td></td>
-                                <td>{{$item->status_message}}</td>
-                                <td>                                    
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-sm btn-danger">Delete</a>
-                                </td>
-                            </tr>
+                            @forelse($sales as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>{{$item->tracking_no}}</td>
+                                    <td>{{$item->fullname}}</td>
+                                    <td>{{$item->payment_mode}}</td>
+                                    <td>{{$item->created_at->format('d-m-Y')}}</td>
+                                    <td>{{$item->status_message}}</td>
+                                    <td>
+                                        <a href="{{ url('admin/sales/'.$item->id) }}" class="btn btn-primary btn-sm">View</a>
+                                    </td>
+                                </tr>
+
                             @empty
                                 <tr>
                                     <td colspan="7">No Sales History</td>
                                 </tr>
                             @endforelse
-                        </tbody>
 
+                        </tbody>
                     </table>
+
 
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-
-<!-- @push('script')
-    <script>
-        window.addEventListener('close-modal', event => {
-
-            $('#deleteModal').modal('hide');
-
-        });
-
-    </script>
-@endpush -->
+   
+      
 @endsection
-
-
-
-

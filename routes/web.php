@@ -119,6 +119,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     //Sales
     Route::controller(App\Http\Controllers\Admin\SalesController::class)->group(function(){
         Route::get('/sales','index');
+        Route::get('/sales/{orderId}','show');
     });
 
     //Home Slider
@@ -131,6 +132,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('sliders/{slider}/delete','destroy');
     });
 
+    //Data Analytics
+    Route::controller(App\Http\Controllers\Admin\DataAnalyticsController::class)->group(function(){
+        Route::get('/dataAnalytics','index');
+    });
 
 
 });
