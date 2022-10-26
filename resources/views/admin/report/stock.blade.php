@@ -9,8 +9,8 @@
 
         <div class="card">
             <div class="card-header">
-                <h4 class="text-primary">
-                    <i class="fa fa-shopping-cart text-dark"></i> Stock Report
+                <h4>
+                    Stock Report
                     <a href="{{ url('admin/stockReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1">Download Report</a>
                     <a href="{{ url('admin/stockReport/view') }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1">View Report</a>
                 </h4>

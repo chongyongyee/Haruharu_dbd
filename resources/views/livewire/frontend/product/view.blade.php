@@ -7,7 +7,6 @@
                 <div class="col-md-5 mt-3">
                     <div class="bg-white border" wire:ignore>
                         @if($product->productImages)
-                        <!-- <img src="{{ asset($product->productImages[0]->image) }}" class="w-100" alt="Img"> -->
                         <div class="exzoom" id="exzoom">
                             <!-- Images -->
                             <div class="exzoom_img_box">

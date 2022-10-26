@@ -139,7 +139,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
     //Report
     Route::controller(App\Http\Controllers\Admin\ReportController::class)->group(function(){
+        //Business Report
         Route::get('/businessReport','businessIndex');
+        Route::get('/businessReport/view','viewBusinessReport');
+        Route::get('/businessReport/generate','generateBusinessReport');
+
+        //Stock Report
         Route::get('/stockReport','stockIndex');
         Route::get('/stockReport/view','viewStockReport');
         Route::get('/stockReport/generate','generateStockReport');
