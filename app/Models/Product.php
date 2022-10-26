@@ -18,7 +18,6 @@ class Product extends Model
         'productName',
         'categoryId',
         'productQuantity',
-        'productOriginalPrice',
         'productSellingPrice',
         'productDescription',
         'trending'

@@ -150,5 +150,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/stockReport/generate','generateStockReport');
     });
 
+    //Forecasting
+    Route::controller(App\Http\Controllers\Admin\ForecastingController::class)->group(function(){
+        Route::get('/forecasting','index');
+    });
 
 });

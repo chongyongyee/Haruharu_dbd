@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         
-        $products = Product::paginate(5);
+        $products = Product::get();
         return view('admin.products.index', compact('products'));
     }
 
@@ -40,7 +40,6 @@ class ProductController extends Controller
             'categoryId' => $validatedData['categoryId'],
             'productName' =>$validatedData['name'],
             'productQuantity' =>$validatedData['productQuantity'],
-            'productOriginalPrice' =>$validatedData['originalPrice'],
             'productSellingPrice' =>$validatedData['sellingPrice'],
             'productDescription' =>$validatedData['description'],
             'trending' =>$request->trending == true ? '1':'0'
@@ -94,7 +93,6 @@ class ProductController extends Controller
                 'categoryId' => $validatedData['categoryId'],
                 'productName' =>$validatedData['name'],
                 'productQuantity' =>$validatedData['productQuantity'],
-                'productOriginalPrice' =>$validatedData['originalPrice'],
                 'productSellingPrice' =>$validatedData['sellingPrice'],
                 'productDescription' =>$validatedData['description'],
                 'trending' =>$request->trending == true ? '1':'0'

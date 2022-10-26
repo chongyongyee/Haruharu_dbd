@@ -91,7 +91,7 @@
         </li>
       </a>
 
-      <a href="#">
+      <a href="{{ url('/admin/forecasting') }}">
         <li class="sideNavbar-list-item">
           <span class="material-symbols-outlined">travel_explore</span> Forecasting
         </li>

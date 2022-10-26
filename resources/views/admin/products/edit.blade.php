@@ -67,10 +67,6 @@
                                 <textarea name="description" class="form-control" rows="4">{{ $product->productDescription }}</textarea>
                             </div>
 
-                            <div class="mb-3">
-                                <label>Quantity</label>
-                                <input type="number" name="productQuantity" value="{{ $product->productQuantity }}" class="form-control"/>
-                            </div>
                             
                         </div>
 
@@ -78,8 +74,8 @@
                             <div class="row">
                                 
                                 <div class="mb-3">
-                                    <label>Original Price</label>
-                                    <input type="text" name="originalPrice" value="{{ $product->productOriginalPrice }}" class="form-control"/>
+                                    <label>Quantity</label>
+                                    <input type="number" name="productQuantity" value="{{ $product->productQuantity }}" class="form-control"/>
                                 </div>
 
                                 <div class="mb-3">

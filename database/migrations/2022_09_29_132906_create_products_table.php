@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('productName');
             $table->unsignedBigInteger('categoryId');
             $table->integer('productQuantity');
-            $table->decimal('productOriginalPrice',12,2);
             $table->decimal('productSellingPrice',12,2);
             $table->longText('productDescription');
             $table->tinyInteger('trending')->default('0')->comment('1=trending, 0= not trending');

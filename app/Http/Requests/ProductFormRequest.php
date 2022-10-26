@@ -44,12 +44,6 @@ class ProductFormRequest extends FormRequest
                 'integer'
             ],
 
-            'originalPrice'=>[
-                'required',
-                'numeric',
-                'between:0,9999999999.99' 
-            ],
-
             'sellingPrice'=>[
                 'required',
                 'numeric',
