@@ -4,28 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Order;
-use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class DataAnalyticsController extends Controller
 {
     public function index()
     {
 
-        $orders = Order::all();
-        return view('admin.data-analytics.index',['orders' => $orders]);  
-    }
-    //     $order = Order::select('id','created_at')->get()->groupBy(function($order){
-    //         return Carbon::parse($order->created_at)->format('M');
-    //     });
+        $result = DB::select(DB::raw("SELECT COUNT(productName) as product_name,category.category from products LEFT JOIN category ON category.categoryId = products.categoryId GROUP BY category.categoryId"));
+        $data = "";
+        foreach($result as $val){
+            $data.="['".$val->category."',     ".$val->product_name."],";
+        }
 
-    //     $months = [];
-    //     $monthCount=[];
-    //     foreach($order as $month => $values){
-    //         $months[]=$month;
-    //         $monthCount[]=count($values);
-    //     }
-    //     return view('admin.data-analytics.index',['order' => $order, 'months'=> $months, 'monthCount'=>$monthCount]);
-    // }
+        $chartData = $data;
+        return view('admin.data-analytics.index',compact('chartData'));  
+    }
+  
      
 }
