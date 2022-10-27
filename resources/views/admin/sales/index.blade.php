@@ -13,33 +13,6 @@
             </div>
 
             <div class="card-body">
-
-            <!-- <form action="" method="GET">
-                <div class="row">
-                    <div class="col-md-3">
-                        <label> Filter by Date</label>
-                        <input type="date" name="date" value="{{Request::get('date') ?? date('Y-m-d')}}" class="form-control"/>
-                    </div>
-
-                    <div class="col-md-3">
-                        <label> Filter by status</label>
-                        <select name="status" class="form-select">
-                            <option value="">Select All Status</option>
-                            <option value="in progress" {{Request::get('status') == 'in-progress' ? 'selected': ''}}>In Progress</option>
-                            <option value="pending" {{Request::get('status') == 'pending'  ? 'selected': ''}}>Pending</option>
-                            <option value="completed" {{Request::get('status') == 'completed'  ? 'selected': ''}}>Completed</option>
-                            <option value="out-for-delivery" {{Request::get('status') == 'out-for-delivery'  ? 'selected': ''}}>Out for delivery</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-6">
-                        <br/>
-                        <button type="submit" class="btn btn-primary">Filter</button>
-                    </div>
-                </div>
-            </form> -->
-            <hr>
-
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped" id="data-table">
                         <thead>

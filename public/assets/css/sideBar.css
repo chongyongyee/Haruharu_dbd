@@ -65,7 +65,7 @@
     position: absolute;
   }
   
-  a, .btnDropDown{
+  .nav, .btnDropDown{
     text-decoration: none;
     color: #9799ab;
   }
