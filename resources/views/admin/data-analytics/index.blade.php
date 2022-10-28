@@ -36,37 +36,35 @@
       }
     </script>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
+      google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
+          ['Year', 'Sales', 'Expenses'],
+          [2000, 100, 100],
+          [2001, 200, 200],
+          
+          
         ]);
 
         var options = {
-          chart: {
-            title: 'Haruharu_dbd',
-            subtitle: 'Sales, Expenses, and Profit',
-          },
-          bars: 'vertical' // Required for Material Bar Charts.
+          title: 'Haruharu_dbd Sales & Expenses',
+          curveType: 'function',
+          legend: { position: 'bottom' }
         };
 
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-        chart.draw(data, google.charts.Bar.convertOptions(options));
+        chart.draw(data, options);
       }
     </script>
 
   <body>
     <div id="piechart" style="width: 900px; height: 500px;"></div>
-    <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>
 </html>
 

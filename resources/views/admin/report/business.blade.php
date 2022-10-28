@@ -9,7 +9,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h4>Report</h4>
+                <h4>Business Report</h4>
             </div>
 
             <div class="card-body">
@@ -34,9 +34,9 @@
                             <thead>
                                 <h5>Sales Report</h5>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Product</th>
-                                    <th>Name</th>
+                                    <th>Order ID</th>
+                                    <th>Product Name</th>
+                                    <th>Customer Name</th>
                                     <th>Quantity</th>
                                     <th>Date</th>
                                     <th>Payment Method</th>
@@ -46,15 +46,21 @@
                             </thead>
 
                             <tbody>
+                            @forelse ($order as $row)
                                 <tr>
-                                    <td>#</td>
-                                    <td>Product</td>
-                                    <td>Name</td>
-                                    <td>Quantity</td>
-                                    <td>Date</td>
-                                    <td>Payment Method</td>
-                                    <td>Total Price</td>
+                                    <td>{{$row->id}}</td>
+                                    <td>{</td>
+                                    <td>{{$row->fullname}}</td>
+                                    <td>{{$row->quantity}}</td>
+                                    <td>{{$row->updated_at->format('d-m-Y')}}</td>
+                                    <td>{{$row->payment_mode}}</td>
+                                    <td>RM {{$row->price}}</td>
                                 </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="7">No Sales Records</td>
+                                </tr>
+                            @endforelse
                             </tbody>
                         </table>
                     </div>

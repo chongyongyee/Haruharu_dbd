@@ -28,6 +28,11 @@
                         @error('product')<small class="text-danger">{{ ($message) }} </small>@enderror                     
                     </div>
                     <div class="mb-3">
+                        <label>Phone</label>
+                        <input type="text" name="phone" value="{{ $supplier->phone }}" class="form-control">     
+                        @error('phone')<small class="text-danger">{{ ($message) }} </small>@enderror                  
+                    </div>
+                    <div class="mb-3">
                         <label>Cost</label>
                         <input type="text" name="cost" value="{{ $supplier->cost }}" class="form-control"> 
                         @error('cost')<small class="text-danger">{{ ($message) }} </small>@enderror                         

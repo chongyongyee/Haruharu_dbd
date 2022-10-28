@@ -25,7 +25,7 @@
                             <th>ID</th>
                             <th>Product Name</th>
                             <th>Category</th>                            
-                            <th>Selling Price</th>
+                            <th>Price</th>
                             <th>Quantity</th>
                             <th>Action</th>
                         </tr>

@@ -134,7 +134,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
     //Data Analytics
     Route::controller(App\Http\Controllers\Admin\DataAnalyticsController::class)->group(function(){
-        Route::get('/dataAnalytics','index');
+        Route::get('/dataAnalytics','pieChart');
+        Route::get('/dataAnalytics','lineChart');
     });
 
     //Report

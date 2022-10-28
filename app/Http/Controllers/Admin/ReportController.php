@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Expenses;
 use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Support\Carbon;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -15,8 +16,28 @@ class ReportController extends Controller
     public function businessIndex()
     {
         $expenses = Expenses::get();
-        $sales = Order::get();
-        return view('admin.report.business', compact('expenses','sales'));
+        $order = Order::where('status_message', 'completed')->get();
+
+        $orderItems = OrderItem::where('id', 'orderId')->get();
+
+        if($order)
+        {
+
+            return view('admin.report.business', compact('expenses','order','orderItems'));
+        }
+        
+    }
+
+    public function generateBusinessReport()
+    {
+
+
+    }
+
+    public function viewBusinessReport()
+    {
+
+
     }
 
     public function stockIndex()
@@ -44,4 +65,5 @@ class ReportController extends Controller
         $product = Product::get();
         return view('admin.report.stockReport', compact('product'));
     }
+
 }

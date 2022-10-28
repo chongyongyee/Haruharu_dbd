@@ -42,4 +42,5 @@ class DashboardController extends Controller
 
         return view('admin.dashboard', compact('totalProducts', 'totalOrders','totalCategory', 'totalSales', 'totalExpense', 'todayOrder', 'thisMonthOrder','thisYearOrder'));
     }
+    
 }

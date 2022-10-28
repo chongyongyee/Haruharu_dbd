@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id('supplierId');
             $table->string('supplierName');
             $table->string('supplierProduct');
+            $table->string('phone');
             $table->decimal('cost',12,2);
             $table->date('date');
             $table->timestamps();

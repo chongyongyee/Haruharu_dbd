@@ -41,6 +41,10 @@ class SupplierFormRequest extends FormRequest
                 'required',
                 'date'
             ],
+            'phone' => [
+                'required',
+                'string'
+            ],
         ];
     }
 }

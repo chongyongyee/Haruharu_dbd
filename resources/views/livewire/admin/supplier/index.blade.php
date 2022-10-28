@@ -42,6 +42,7 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Product</th>
+                                <th>Phone</th>
                                 <th>Cost</th>
                                 <th>Date</th>
                                 <th>Action</th>
@@ -54,6 +55,7 @@
                                 <td>{{ $row->supplierId}}</td>
                                 <td>{{ $row->supplierName}}</td>
                                 <td>{{ $row->supplierProduct}}</td>
+                                <td>{{ $row->phone}}</td>
                                 <td>RM {{ $row->cost, $precision = 8, $scale = 2}}</td>
                                 <td>{{ $row->date}}</td>
                                 <td>
@@ -63,17 +65,12 @@
                             </tr>
                          @empty
                             <tr>
-                                <td colspan="6">No Supplier Records</td>
+                                <td colspan="7">No Supplier Records</td>
                             </tr>
                         @endforelse
                         </tbody>
 
                     </table>
-
-                    <!--Pagination-->
-                    <div>
-                        {{ $supplier->links()}}
-                    </div>
 
                 </div>
             </div>

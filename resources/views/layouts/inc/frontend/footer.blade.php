@@ -33,7 +33,10 @@
                         </div>
                         <div class="mb-2">
                             <div class="text-white">
-                                <i class="fa fa-instagram"></i> Haruharu_dbd
+                                <a href="https://www.instagram.com/haruharu_dbd/" style="color: white;">
+                                    <i class="fa fa-instagram"></i> Haruharu_dbd
+                                </a>
+                                
                             </div>
                         </div>
                     </div>

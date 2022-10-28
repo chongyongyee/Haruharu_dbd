@@ -19,7 +19,7 @@
                             <tr>
                                 <th>Order ID</th>
                                 <th>Tracking No</th>
-                                <th>Username</th>
+                                <th>Name</th>
                                 <th>Payment Method</th>
                                 <th>Ordered Date</th>
                                 <th>Status</th>
