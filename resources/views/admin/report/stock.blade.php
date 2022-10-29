@@ -35,7 +35,7 @@
                                     <tr>
                                         <td>{{ $row->productId}}</td>
                                         <td>{{ $row->productName}}</td>
-                                        <td>{{ $row->productSellingPrice}}</td>
+                                        <td>RM {{ $row->productSellingPrice}}</td>
                                         <td>{{ $row->productQuantity}}</td>
                                     </tr>
                                 @empty

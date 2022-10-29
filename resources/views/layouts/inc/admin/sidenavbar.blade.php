@@ -86,11 +86,31 @@
       </div>
       
 
-      <a href="{{ url('/admin/dataAnalytics') }}" class="nav">
-        <li class="sideNavbar-list-item">
-          <span class="material-symbols-outlined">trending_up</span> Data Analytics
-        </li>
-      </a>
+      <button class="btnDropDown">
+          <li class="sideNavbar-list-item">
+            <span class="material-icons-outlined">trending_up</span> Data Analytics <i class="fa fa-caret-down"></i>
+          </li>            
+      </button>
+
+      <div class="dropdown-content">
+        <a href="{{ url('/admin/dataAnalytics') }}" class="nav">
+          <li class="sideNavbar-list-item">
+            <span class="material-symbols-outlined">pie_chart</span> Product Category Chart
+          </li>
+        </a>
+
+        <a href="{{ url('admin/dataAnalytics/lineChart') }}" class="nav">
+          <li class="sideNavbar-list-item">
+            <span class="material-symbols-outlined">show_chart</span> Orders Chart
+          </li>
+        </a>
+
+        <a href="{{ url('admin/dataAnalytics/barChart') }}" class="nav">
+          <li class="sideNavbar-list-item">
+            <span class="material-symbols-outlined">bar_chart</span> Sales & Expenses Chart
+          </li>
+        </a>
+      </div>
 
       <a href="{{ url('/admin/forecasting') }}" class="nav">
         <li class="sideNavbar-list-item">
