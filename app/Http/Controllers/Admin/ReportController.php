@@ -82,26 +82,26 @@ class ReportController extends Controller
 
         $todayDate =Carbon::now()->format('d-m-Y');
         // download PDF file with download method
-        return $pdf->download('stockReport-'.'-'.$todayDate.'.pdf');
+        return $pdf->download('businessReport-'.'-'.$todayDate.'.pdf');
 
     }
 
-    public function viewBusinessReport()
-    {
-        $expenses = Expenses::get();
-        $orders = Order::with([ 'orderItems', 'orderItems.product'])
-            ->withCount('orderItems')
-            ->withWhereHas('orderItems', function($query){
-                $query->whereHas('product', function ($query) {
-                });
-            })
-            ->Where('status_message', 'completed')
-            ->orderBy('updated_at','desc')
-            ->get();
-        $Sales = $this->OrderItem->sales();
-        return view('admin.report.businessReport', compact('expenses','orders','Sales'));
+    // public function viewBusinessReport()
+    // {
+    //     $expenses = Expenses::get();
+    //     $orders = Order::with([ 'orderItems', 'orderItems.product'])
+    //         ->withCount('orderItems')
+    //         ->withWhereHas('orderItems', function($query){
+    //             $query->whereHas('product', function ($query) {
+    //             });
+    //         })
+    //         ->Where('status_message', 'completed')
+    //         ->orderBy('updated_at','desc')
+    //         ->get();
+    //     $Sales = $this->OrderItem->sales();
+    //     return view('admin.report.businessReport', compact('expenses','orders','Sales'));
 
-    }
+    // }
 
     public function stockIndex()
     {

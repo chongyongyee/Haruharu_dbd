@@ -36,7 +36,7 @@
             <td class="cp">{{$qty}}</td>
             <td class="cp">{{$order->updated_at->format('d-m-Y')}}</td>
             <td class="cp" >{{$order->payment_mode}}</td>
-            <td class="cp" >{{$price}}</td>
+            <td class="cp" >RM {{$price}}</td>
         </tr>
     @empty
         <tr>

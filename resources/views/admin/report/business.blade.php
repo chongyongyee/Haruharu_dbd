@@ -19,8 +19,7 @@
         <div class="card">
             <div class="card-header">
                 Business Report
-                    <a href="{{ url('admin/businessReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1">Download Report</a>
-                <a href="{{ url('admin/businessReport/view') }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1">View Report</a>
+                    <a href="{{ url('admin/businessReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1 text-white">Download Report</a>
             </div>
 
             <div class="card-body">
@@ -36,8 +35,8 @@
 
                     <div class="col-md-6">
                         <br/>
-                        <button type="submit" class="btn btn-primary filterDate">Filter</button>
-                        <button type="button" name="refresh" id="refresh" class="btn btn-success">Refresh</button>
+                        <button type="submit" class="btn btn-sm btn-primary filterDate text-white">Filter</button>
+                        <button type="button" name="refresh" id="refresh" class="btn btn-sm btn-success text-white">Refresh</button>
                     </div>
                     <br/>
 

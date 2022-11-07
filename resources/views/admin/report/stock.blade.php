@@ -11,8 +11,8 @@
             <div class="card-header">
                 <h4>
                     Stock Report
-                    <a href="{{ url('admin/businessReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1">Download Report</a>
-                    <a href="{{ url('admin/stockReport/view') }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1">View Report</a>
+                    <a href="{{ url('admin/businessReport/generate') }}" class="btn btn-sm btn-primary btn-sm float-end mx-1 text-white">Download Report</a>
+                    <a href="{{ url('admin/stockReport/view') }}" target="_blank" class="btn btn-sm btn-warning btn-sm float-end mx-1 text-white">View Report</a>
                 </h4>
             </div>
 
