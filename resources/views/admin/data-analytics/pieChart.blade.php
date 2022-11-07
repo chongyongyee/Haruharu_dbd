@@ -1,18 +1,22 @@
 @extends('layouts.admin')
 
-@section('title','Data Analytics-Product Category Chart')
+@section('title','Data Analytics')
 
 @section('content')
-    <div class="row">
-        <div class="card">
-            <div class="card-header">
-                <h4>
-                    Data Analytics - Product Category Chart
-                </h4>
-            </div>
-        </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>
+        Data Analytics - Product Category Chart
+      </h3>
+      
+        <body>
+          <div id="piechart" style="width: 1100px; height: 500px;"></div>
+        </body>
+      
     </div>
-        
+  </div>
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -36,10 +40,9 @@
       }
     </script>
 
-
-  <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-  </body>
-
+  
 
 @endsection
+
+    
+

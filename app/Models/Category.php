@@ -22,5 +22,15 @@ class Category extends Model
     {
         return $this->hasMany(Product::class,'categoryId','categoryId');
     }
-
+    public function orderItems()
+    {
+        return $this->hasManyThrough(
+            OrderItem::class,
+            Product::class,
+            'categoryId', // Foreign key on the environments table...
+            'productId', // Foreign key on the deployments table...
+            'categoryId', // Local key on the projects table...
+            'productId' // Local key on the environments table...
+        );
+    }
 }

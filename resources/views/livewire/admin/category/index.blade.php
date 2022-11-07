@@ -15,8 +15,8 @@
                     </div>
                         
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary btn-sm text-white">Delete</button>
                     </div>
                 </form>
             </div>
@@ -33,7 +33,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3>Category
-                        <a href="{{ url('admin/category/create') }}" class ="btn btn-primary float-end">Add Category</a>
+                        <a href="{{ url('admin/category/create') }}" class ="btn btn-sm btn-primary float-end text-white">Add Category</a>
                     </h3>
                 </div>
 
@@ -55,8 +55,8 @@
                                     <td>{{ $row->category}}</td>
                                     <td>{{ $row->date}}</td>
                                     <td>
-                                        <a href="{{ url('admin/category/'.$row->categoryId.'/edit') }}" class="btn btn-sm btn-success">Edit</a>
-                                        <a href="#" wire:click="deleteCategory({{ $row->categoryId }})" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-sm btn-danger">Delete</a>
+                                        <a href="{{ url('admin/category/'.$row->categoryId.'/edit') }}" class="btn btn-sm btn-success text-white">Edit</a>
+                                        <a href="#" wire:click="deleteCategory({{ $row->categoryId }})" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-sm btn-danger text-white">Delete</a>
                                     </td>
                                 </tr>
                                 @empty

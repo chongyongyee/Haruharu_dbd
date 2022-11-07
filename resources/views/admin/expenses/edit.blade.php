@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Edit Expenses
-                    <a href="{{ url('admin/expenses') }}" class="btn btn-primary float-end">Back</a>
+                    <a href="{{ url('admin/expenses') }}" class="btn btn-sm btn-danger float-end text-white">Back</a>
                 </h3>
             </div>
 
@@ -34,7 +34,7 @@
                     </div>
                     
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary float-end">Update</button>                       
+                        <button type="submit" class="btn btn-sm btn-primary float-end text-white">Update</button>                       
                     </div>
                     
                 </form>

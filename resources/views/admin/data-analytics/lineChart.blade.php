@@ -1,19 +1,21 @@
 @extends('layouts.admin')
 
-@section('title','Data Analytics-Orders Chart')
+@section('title','Data Analytics')
 
 @section('content')
-    <div class="row">
-        <div class="card">
-            <div class="card-header">
-                <h4>
-                    Data Analytics - Orders Chart
-                </h4>
-            </div>
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Data Analytics - Orders Chart
+            </h3>
+                <body>
+                    <div id="container"></div>
+                </body> 
         </div>
     </div>
 
-<div id="container"></div>
+
+
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 

@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Add Products
-                    <a href="{{ url('admin/products') }}" class="btn btn-danger float-end">Back</a>
+                    <a href="{{ url('admin/products') }}" class="btn btn-sm btn-danger float-end text-white">Back</a>
                 </h3>
             </div>
 
@@ -97,7 +97,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-sm btn-primary text-white">Submit</button>
                     </div>
 
                 </form>

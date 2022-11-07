@@ -15,13 +15,10 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         
-        $todayDate = Carbon::now()->format('Y-m-d');
+        $orders = Order::all();
         $orders = Order::when($request->date != null, function($query) use ($request){
 
                         return $query->whereDate('created_at', $request->date);
-                    }, function($query) use ($todayDate){
-
-                        return $query->whereDate('created_at',$todayDate);
                     })
 
                     //status

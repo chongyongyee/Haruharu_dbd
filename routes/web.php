@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('profile', [App\Http\Controllers\Frontend\UserController::class, 'updateUserDetails']);
     Route::get('change-password', [App\Http\Controllers\Frontend\UserController::class, 'passwordCreate']);
     Route::post('change-password', [App\Http\Controllers\Frontend\UserController::class, 'updatePassword']);
-    
+
 });
 
 
@@ -60,7 +60,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
      //webiste
      Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class,'index']);
 
-     //Supplier 
+     //Supplier
     Route::controller(App\Http\Controllers\Admin\SupplierController::class)->group(function(){
         Route::get('/supplier','index');
         Route::get('/supplier/create','create');
@@ -69,8 +69,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::put('/supplier/{supplier}','update');
     });
 
-     
-    //Expenses 
+
+    //Expenses
     Route::controller(App\Http\Controllers\Admin\ExpensesController::class)->group(function(){
         Route::get('/expenses','index');
         Route::get('/expenses/create','create');
@@ -87,7 +87,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::post('/category','store');
         Route::get('/category/{category}/edit','edit');
         Route::put('/category/{category}','update');
-        
+
     });
 
     //Products
@@ -100,7 +100,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('products/{productId}/delete','destroy');
         //delete img
         Route::get('product-image/{productImageId}/delete', 'destroyImage');
-        
+
 
     });
 
@@ -137,6 +137,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/dataAnalytics','pieChart');
         Route::get('/dataAnalytics/lineChart','lineChart');
         Route::get('/dataAnalytics/barChart','barChart');
+        Route::get('/dataAnalytics/analytics','analytics');
     });
 
     //Report
@@ -144,6 +145,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         //Business Report
         Route::get('/businessReport','businessIndex');
         Route::get('/businessReport/view','viewBusinessReport');
+        Route::get('/businessReport/listing','tableListing');
         Route::get('/businessReport/generate','generateBusinessReport');
 
         //Stock Report
@@ -155,6 +157,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     //Forecasting
     Route::controller(App\Http\Controllers\Admin\ForecastingController::class)->group(function(){
         Route::get('/forecasting','index');
+        Route::get('/forecasting/filtering','filtering');
     });
 
 });

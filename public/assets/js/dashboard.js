@@ -1,6 +1,3 @@
-
-// SIDEBAR TOGGLE
-
 var sideNavbarOpen = false;
 var sideNavbar = document.getElementById("sideNavbar");
 
@@ -23,7 +20,7 @@ function closeSidebar() {
 // BAR CHART
 var barChartOptions = {
   series: [{
-    data: [10, 8, 6, 4, 2]
+    data: barChart ? Object.values(barChart['total']) : [],
   }],
   chart: {
     type: 'bar',
@@ -54,7 +51,7 @@ var barChartOptions = {
     show: false
   },
   xaxis: {
-    categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+    categories: barChart ? Object.values(barChart['products']) : [],
   },
   yaxis: {
     title: {
@@ -70,11 +67,8 @@ barChart.render();
 // AREA CHART
 var areaChartOptions = {
   series: [{
-    name: 'Purchase Orders',
-    data: [31, 40, 28, 51, 42, 109, 100]
-  }, {
     name: 'Sales Orders',
-    data: [11, 32, 45, 32, 34, 52, 41]
+    data: areaChart ? Object.values(areaChart) : [],
   }],
   chart: {
     height: 350,
@@ -90,16 +84,11 @@ var areaChartOptions = {
   stroke: {
     curve: 'smooth'
   },
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec"],
   markers: {
     size: 0
   },
   yaxis: [
-    {
-      title: {
-        text: 'Purchase Orders',
-      },
-    },
     {
       opposite: true,
       title: {

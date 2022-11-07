@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Edit Slider
-                    <a href="{{ url('admin/sliders/') }}" class="btn btn-danger float-end">Back</a>
+                    <a href="{{ url('admin/sliders/') }}" class="btn btn-sm btn-danger float-end text-white">Back</a>
                 </h3>
             </div>
 
@@ -42,7 +42,7 @@
                         <h6>*Checked=Hidden, UnChecked=visible </h6>                       
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary float-end">Update</button>                       
+                        <button type="submit" class="btn btn-sm btn-primary float-end text-white">Update</button>                       
                     </div>
                     
                 </form>

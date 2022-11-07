@@ -34,7 +34,7 @@
 
                     <div class="col-md-6">
                         <br/>
-                        <button type="submit" class="btn btn-primary">Filter</button>
+                        <button type="submit" class="btn btn-sm btn-primary text-white">Filter</button>
                     </div>
                 </div>
             </form>
@@ -64,7 +64,7 @@
                                     <td>{{$item->created_at->format('d-m-Y')}}</td>
                                     <td>{{$item->status_message}}</td>
                                     <td>
-                                        <a href="{{ url('admin/orders/'.$item->id) }}" class="btn btn-primary btn-sm">View</a>
+                                        <a href="{{ url('admin/orders/'.$item->id) }}" class="btn btn-primary btn-sm text-white">View</a>
                                     </td>
                                 </tr>
 

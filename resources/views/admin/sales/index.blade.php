@@ -37,7 +37,7 @@
                                     <td>{{$item->created_at->format('d-m-Y')}}</td>
                                     <td>{{$item->status_message}}</td>
                                     <td>
-                                        <a href="{{ url('admin/sales/'.$item->id) }}" class="btn btn-primary btn-sm">View</a>
+                                        <a href="{{ url('admin/sales/'.$item->id) }}" class="btn btn-primary btn-sm text-white">View</a>
                                     </td>
                                 </tr>
 

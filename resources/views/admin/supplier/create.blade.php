@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Add Supplier
-                    <a href="{{ url('admin/supplier') }}" class="btn btn-danger float-end">Back</a>
+                    <a href="{{ url('admin/supplier') }}" class="btn btn-sm btn-danger float-end text-white">Back</a>
                 </h3>
             </div>
 
@@ -42,7 +42,7 @@
                         @error('date')<small class="text-danger">{{ ($message) }} </small>@enderror                     
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary float-end">Save</button>                       
+                        <button type="submit" class="btn btn-sm btn-primary float-end text-white">Save</button>                       
                     </div>
                     
                 </form>

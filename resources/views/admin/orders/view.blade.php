@@ -20,9 +20,9 @@
                 
                     <h4 class="text-primary">
                         <i class="fa fa-shopping-cart text-dark"></i> My Order Details
-                        <a href="{{ url('admin/orders') }}" class="btn btn-danger btn-sm float-end mx-1">Back</a>
-                        <a href="{{ url('admin/invoice/'. $order->id.'/generate') }}" class="btn btn-primary btn-sm float-end mx-1">Download Invoice</a>
-                        <a href="{{ url('admin/invoice/' .$order->id) }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1">View Invoice</a>
+                        <a href="{{ url('admin/orders') }}" class="btn btn-danger btn-sm float-end mx-1 text-white">Back</a>
+                        <a href="{{ url('admin/invoice/'. $order->id.'/generate') }}" class="btn btn-primary btn-sm float-end mx-1 text-white">Download Invoice</a>
+                        <a href="{{ url('admin/invoice/' .$order->id) }}" target="_blank" class="btn btn-warning btn-sm float-end mx-1 text-white">View Invoice</a>
                     </h4>
                     <hr>
 
@@ -126,7 +126,7 @@
                                     <option value="completed" {{Request::get('status') == 'completed'  ? 'selected': ''}}>Completed</option>
                                     <option value="out-for-delivery" {{Request::get('status') == 'out-for-delivery'  ? 'selected': ''}}>Out for delivery</option>
                                 </select>  
-                                <button type="submit" class="btn btn-primary text-white" >Update</button>
+                                <button type="submit" class="btn btn-sm btn-primary text-white" >Update</button>
                             </div>
                         </form>
                     </div>

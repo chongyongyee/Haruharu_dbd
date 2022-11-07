@@ -17,4 +17,15 @@ class Expenses extends Model
         'cost',
         'date',
     ];
+
+
+    public function expense()
+    {
+        return $this->sum('cost');
+    }
+
+    public function monthlyExpenses()
+    {
+        return $this->sum('cost');
+    }
 }

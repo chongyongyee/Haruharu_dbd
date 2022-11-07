@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Products
-                    <a href="{{ url('admin/products/create') }}" class="btn btn-primary float-end">Add Products</a>
+                    <a href="{{ url('admin/products/create') }}" class="btn btn-sm btn-primary float-end text-white">Add Products</a>
                 </h3>
             </div>
 
@@ -48,8 +48,8 @@
                             <td>{{$product->productQuantity}}</td>
                            
                             <td>
-                                <a href="{{ url('admin/products/'.$product->productId.'/edit') }}" class="btn btn-sm btn-success">Edit</a>
-                                <a href="{{ url('admin/products/'.$product->productId.'/delete') }}" onclick="return confirm('Are You Sure You Want To Delete This Data?')" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{ url('admin/products/'.$product->productId.'/edit') }}" class="btn btn-sm btn-success text-white">Edit</a>
+                                <a href="{{ url('admin/products/'.$product->productId.'/delete') }}" onclick="return confirm('Are You Sure You Want To Delete This Data?')" class="btn btn-sm btn-danger text-white">Delete</a>
                             </td>
                         </tr>
                         @empty

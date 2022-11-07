@@ -32,12 +32,11 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-
     @livewireStyles
 </head>
 <body>
     <div id="app">
-        
+
         @include('layouts.inc.frontend.navbar')
 
         <main>
@@ -47,7 +46,7 @@
         <br>
         <br>
         @include('layouts.inc.frontend.footer')
-        
+
     </div>
 
     <!-- Script -->
@@ -59,11 +58,11 @@
         window.addEventListener('message', event => {
             if(event.detail){
                 alertify.set('notifier','position', 'top-right');
-                alertify.notify(event.detail.text, event.detail.type);  
+                alertify.notify(event.detail.text, event.detail.type);
             }
-            
+
         });
-        
+
     </script>
 
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>

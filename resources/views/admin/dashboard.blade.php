@@ -3,10 +3,10 @@
 @section('title','Dashboard')
 
 @section('content')
- 
+
 <body>
-    <!-- Main -->    
-    <main class="main-container">      
+    <!-- Main -->
+    <main class="main-container">
       <div class="main-title">
         <p class="font-weight-bold">DASHBOARD</p>
       </div>
@@ -24,9 +24,9 @@
               </div>
             </div>
           </div>
-          <span class="text-primary font-weight-bold">{{$totalOrders}}</span>
+          <span class="text-primary font-weight-bold">{{$totalOrder}}</span>
         </div>
-       
+
 
         <div class="cardDashboard">
           <div class="card-inner">
@@ -127,7 +127,7 @@
         </div>
 
       </div>
-      
+
       <!--Charts-->
       <div class="charts">
 
@@ -144,7 +144,10 @@
       </div>
     </main>
     <!-- End Main -->
-
+    <script type="text/javascript">
+        var barChart =  {{ Js::from($topProducts) }};
+        var areaChart = {{ Js::from($saleProducts) }};
+    </script>
   @livewireScripts
 </body>
 </html>
@@ -153,4 +156,3 @@
 
 
 
-  

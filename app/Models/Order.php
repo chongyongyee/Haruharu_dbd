@@ -30,7 +30,7 @@ class Order extends Model
 
     /**
      * Get all of the orderItems for the Order
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
 
@@ -39,5 +39,5 @@ class Order extends Model
         return $this->hasMany(OrderItem::class,'orderId','id' );
     }
 
-   
+
 }
