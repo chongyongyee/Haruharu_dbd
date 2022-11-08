@@ -146,7 +146,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/businessReport','businessIndex');
         // Route::get('/businessReport/view','viewBusinessReport');
         Route::get('/businessReport/listing','tableListing');
-        Route::get('/businessReport/generate','generateBusinessReport');
+        // Route::get('/businessReport/generate','generateBusinessReport');
 
         //Stock Report
         Route::get('/stockReport','stockIndex');

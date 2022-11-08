@@ -19,7 +19,6 @@
         <div class="card">
             <div class="card-header">
                 Business Report
-                    <a href="{{ url('admin/businessReport/generate') }}" class="btn btn-primary btn-sm float-end mx-1 text-white">Download Report</a>
             </div>
 
             <div class="card-body">
