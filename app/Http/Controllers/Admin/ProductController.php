@@ -25,8 +25,6 @@ class ProductController extends Controller
     {
         //link to category modal to get category name
         $category = Category::all();
-        //$size = Size::where('status','0')->get();
-        // return view('admin.products.create',compact('category', 'size'));
         return view('admin.products.create',compact('category'));
     }
 

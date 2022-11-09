@@ -31,7 +31,7 @@ class Index extends Component
      
     public function render()
     {
-        $expenses = Expenses::orderBy('date','DESC')->paginate(5);
+        $expenses = Expenses::orderBy('date','DESC')->get(0);
         return view('livewire.admin.expenses.index',['expenses'=>$expenses]);
     }
 }

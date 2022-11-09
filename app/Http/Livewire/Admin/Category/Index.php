@@ -31,7 +31,7 @@ class Index extends Component
 
     public function render()
     {
-        $category = Category::orderBy('categoryId','ASC')->paginate(5);
+        $category = Category::orderBy('categoryId','ASC')->get();
         return view('livewire.admin.category.index',['category'=> $category]);
     }
 }

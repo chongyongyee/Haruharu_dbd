@@ -31,7 +31,7 @@ class Index extends Component
      
     public function render()
     {
-        $supplier = Supplier::orderBy('date','DESC')->paginate(5);
+        $supplier = Supplier::orderBy('date','DESC')->get();
         return view('livewire.admin.supplier.index',['supplier'=>$supplier]);
     }
 }

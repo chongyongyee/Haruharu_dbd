@@ -1,4 +1,5 @@
 <table class="table table-bordered table-striped businessTable">
+    <h5>Sales Report</h5>
     <thead>
     <tr>
         <th>Order ID</th>

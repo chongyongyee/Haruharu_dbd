@@ -55,7 +55,7 @@ class ProductFormRequest extends FormRequest
             ],
 
             'image'=>[
-                'nullable',
+                'required',
                 //'image|mimes:jpeg,png,jpg'
             ],
 

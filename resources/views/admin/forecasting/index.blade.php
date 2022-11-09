@@ -67,7 +67,8 @@
                     <button type="submit" class="btn btn-sm btn-primary float-end forcastSales text-white">Forecast</button>
                 </div>
             </div>
-            <div class="col-md-9 text-center m-auto">
+            <div class="col-md-6 text-center m-auto">
+                <!-- <canvas id="myChart" height="500" width="800"></canvas> -->
                 <div id="chartContainer"></div>
             </div>
 
