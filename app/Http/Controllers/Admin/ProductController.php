@@ -31,7 +31,6 @@ class ProductController extends Controller
     public function store(ProductFormRequest $request)
     {
         $validatedData = $request->validated();
-
         $category = Category::findOrFail($validatedData['categoryId']);
 
         $product = $category->products()->create([
@@ -41,9 +40,7 @@ class ProductController extends Controller
             'productSellingPrice' =>$validatedData['sellingPrice'],
             'productDescription' =>$validatedData['description'],
             'trending' =>$request->trending == true ? '1':'0'
-
         ]);
-
 
         //check image 
         $i = 1;
@@ -64,12 +61,7 @@ class ProductController extends Controller
                 ]);
             }
         }
-
-
         return redirect('/admin/products')->with('message','Product Added Successfully');
-        
-        //return $product->id;
-        
     }
 
     public function edit(int $productId)
@@ -94,7 +86,6 @@ class ProductController extends Controller
                 'productSellingPrice' =>$validatedData['sellingPrice'],
                 'productDescription' =>$validatedData['description'],
                 'trending' =>$request->trending == true ? '1':'0'
-    
             ]);
 
             //check image 
@@ -116,16 +107,12 @@ class ProductController extends Controller
                     ]);
                 }
             }
-
-
             return redirect('/admin/products')->with('message','Product Updated Successfully');
-    
         }
         else
         {
             return redirect('admin/products')->with('message', 'No Such Product Id Found');
         }
-
     }
 
     public function destroyImage(int $productImageId)
@@ -154,7 +141,7 @@ class ProductController extends Controller
             }
         }
         $product->delete();
-        return redirect()->back()->with('message', 'Product Deleted');
+        return redirect()->back()->with('message', 'Product Deleted Successfully');
     }
 
 

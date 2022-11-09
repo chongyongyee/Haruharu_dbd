@@ -75,7 +75,7 @@ class FrontendController extends Controller
     {
         if($request->search)
         {
-            $searchProducts = Product::where('productName', 'LIKE', '%'.$request->search.'%')->latest()->paginate(5);
+            $searchProducts = Product::where('productName', 'LIKE', '%'.$request->search.'%')->latest()->get();
             return view('frontend.pages.search', compact('searchProducts'));
         }
         else

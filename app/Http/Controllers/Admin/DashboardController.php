@@ -51,9 +51,9 @@ class DashboardController extends Controller
         $topProducts = $this->convertArray($topFiveProducts);
         $monthlySales = [];
         for ($month = 1; $month <= 12; $month++) {
-            // Create a Carbon object from the current year and the current month (equals 2019-01-01 00:00:00)
+            // Create a Carbon object from the current year and the current month
             $date = Carbon::create(date('Y'), $month);
-            // Make a copy of the start date and move to the end of the month (e.g. 2019-01-31 23:59:59)
+            // Make a copy of the start date and move to the end of the month
             $date_end = $date->copy()->endOfMonth();
             $totalOrders = OrderItem::where('created_at', '>=', $date)
                 ->where('created_at', '<=', $date_end)
@@ -78,6 +78,5 @@ class DashboardController extends Controller
             'totalCategory', 'totalSales', 'totalExpense', 'todayOrder', 'thisMonthOrder','thisYearOrder',
             'topProducts','saleProducts'));
     }
-
 
 }

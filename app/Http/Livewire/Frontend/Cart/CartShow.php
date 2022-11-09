@@ -26,15 +26,12 @@ class CartShow extends Component
             }
             else
             {
-                
                 $this->dispatchBrowserEvent('message', [
                 'text' => 'Only '.$cartData->product->productQuantity. ' Quantity Available',
                 'type' => 'error',
                 'status' => 404
                 ]);
-
             }
-            
         }
         else{
             $this->dispatchBrowserEvent('message', [
@@ -47,13 +44,9 @@ class CartShow extends Component
 
     public function decrementQuantity(int $cartId)
     {
-
         $cartData = Cart::where('id', $cartId)->where('userId',auth()->user()->id)->first();
         if($cartData)
         {
-            // if quantity less than 0 
-            // prompt error message (cannot decrement)
-
             if($cartData->quantity > 1)
             {
                 $cartData->decrement('quantity');
@@ -65,15 +58,12 @@ class CartShow extends Component
             }
             else
             {
-                
                 $this->dispatchBrowserEvent('message', [
                 'text' => 'Quantity cannot be less than 1',
                 'type' => 'error',
                 'status' => 404
                 ]);
-
             }
-            
         }
         else{
             $this->dispatchBrowserEvent('message', [

@@ -52,7 +52,6 @@ class CheckoutShow extends Component
                 'type' => 'success',
                 'status' => 200
                 ]);
-
             return redirect()->to('thankyou');
         }
         else{
@@ -62,7 +61,6 @@ class CheckoutShow extends Component
                 'status' => 500
                 ]);
         }
-
     }
 
     public function placeOrder()
@@ -93,16 +91,12 @@ class CheckoutShow extends Component
             {
                 $cartItem->product()->where('productId', $cartItem->productId)->decrement('productQuantity', $cartItem->quantity);
             }
-
         }
-
         return $order;
-        
     }
 
     public function codOrder()
     {
-        
         $this->payment_mode = 'Cash on Delivery';
         $codOrder = $this->placeOrder();
         if($codOrder){
