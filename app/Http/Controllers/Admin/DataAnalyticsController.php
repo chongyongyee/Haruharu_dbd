@@ -53,7 +53,7 @@ class DataAnalyticsController extends Controller
         $chartData = $data;
 
 
-        return view('admin.data-analytics.index',compact('chartData'));
+        return view('admin.data-analytics.pieChart',compact('chartData'));
     }
 
     public function lineChart()
