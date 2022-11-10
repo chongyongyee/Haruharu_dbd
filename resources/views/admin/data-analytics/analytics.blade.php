@@ -24,12 +24,16 @@
 
        var options = {
            series: [{
-               name: 'Sales Profit',
-               data: Analytics ? Object.values(Analytics['profits']) : [],
+               name: 'Sales',
+               data: Analytics ? Object.values(Analytics['sales']) : [],
            }, {
-               name: 'Sales Expenses',
+               name: 'Expenses',
                data: Analytics ? Object.values(Analytics['expenses']) : [],
-           }],
+           },
+           {
+               name: 'Profit',
+               data: Analytics ? Object.values(Analytics['profit']) : [],
+            }],
            chart: {
                type: 'bar',
                height: 350

@@ -25,7 +25,6 @@ class Index extends Component
         $this->products = Product::where('categoryId', $this->category->categoryId)
                                     ->when($this->priceInput, function($q){
                                         $q->when($this->priceInput == 'highToLow', function($q2){
-                                            //dd('desc');
                                             $q2->orderBy('productSellingPrice','DESC');
                                             })
                                             ->when($this->priceInput == 'lowToHigh', function($q2){

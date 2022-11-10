@@ -121,12 +121,12 @@
 
             if(category == '')
             {
-                alert('please select Category!');
+                alert('Please select Category!');
                 return false;
             }
             if(targetedSales == '')
             {
-                alert('please select Targeted Sales!');
+                alert('Please enter Targeted Sales!');
                 return false;
             }
             
@@ -171,6 +171,9 @@
                         value: 15,
                         label: "Average"
                     }]
+                },
+                axisX: {
+                    title: "Year",
                 },
                 data: [{
                     yValueFormatString: "#,### Sales",

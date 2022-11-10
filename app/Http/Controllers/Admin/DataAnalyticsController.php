@@ -23,7 +23,7 @@ class DataAnalyticsController extends Controller
 
     public function analytics()
     {
-        $data['profits'] = [];
+        $data['sales'] = [];
         for ($month = 1; $month <= 12; $month++) {
             $date = Carbon::create(date('Y'), $month);
             $date_end = $date->copy()->endOfMonth();
@@ -33,9 +33,12 @@ class DataAnalyticsController extends Controller
             $Expenses = Expenses::where('date', '>=', $date)
                 ->where('date', '<=', $date_end)
                 ->sum('cost');
+            
             // Save the count of transactions for the current month in the output array
-            $data['profits'][$month] = $totalOrders;
+            $data['sales'][$month] = $totalOrders;
             $data['expenses'][$month] = $Expenses;
+            $data['profit'][$month] = $totalOrders-$Expenses;
+            
         }
         $salesProfit = json_encode($data);
         return view('admin.data-analytics.analytics',compact('salesProfit'));
@@ -44,7 +47,8 @@ class DataAnalyticsController extends Controller
     public function pieChart()
     {
 
-        $result = DB::select(DB::raw("SELECT COUNT(productName) as product_name,category.category from products LEFT JOIN category ON category.categoryId = products.categoryId GROUP BY category.categoryId"));
+        $result = DB::select(DB::raw("SELECT COUNT(productName) as product_name,category.category from products LEFT JOIN category 
+        ON category.categoryId = products.categoryId GROUP BY category.categoryId"));
         $data = "";
         foreach($result as $val){
             $data.="['".$val->category."',     ".$val->product_name."],";
@@ -68,13 +72,15 @@ class DataAnalyticsController extends Controller
 
     public function barChart()
     {
+        $totalMonthSales = DB::select(DB::raw("SELECT date_format(updated_at,'%M') as month, sum(price) as price 
+                            from order_items GROUP BY month(updated_at) ORDER BY month(updated_at)"));
+        $totalYearSales = DB::select(DB::raw("SELECT date_format(updated_at,'%Y') as year, sum(price) as price 
+                            from order_items GROUP BY year(updated_at) ORDER BY year(updated_at)"));
+        $totalMonthExpenses = DB::select(DB::raw("SELECT date_format(date,'%M') as month, sum(cost) as cost 
+                            from expenses GROUP BY month(date) ORDER BY month(date)"));
+        $totalYearExpenses = DB::select(DB::raw("SELECT date_format(date,'%Y') as year, sum(cost) as cost 
+                            from expenses GROUP BY year(date) ORDER BY year(date)"));
 
-        $totalMonthSales = DB::select(DB::raw("SELECT date_format(updated_at,'%M') as month, sum(price) as price from order_items GROUP BY month(updated_at) ORDER BY month(updated_at)"));
-        $totalYearSales = DB::select(DB::raw("SELECT date_format(updated_at,'%Y') as year, sum(price) as price from order_items GROUP BY year(updated_at) ORDER BY year(updated_at)"));
-        $totalMonthExpenses = DB::select(DB::raw("SELECT date_format(date,'%M') as month, sum(cost) as cost from expenses GROUP BY month(date) ORDER BY month(date)"));
-        $totalYearExpenses = DB::select(DB::raw("SELECT date_format(date,'%Y') as year, sum(cost) as cost from expenses GROUP BY year(date) ORDER BY year(date)"));
-
-        
         $dataMonthSales = [];
         $dataYearSales = [];
         $dataMonthExpenses = [];
@@ -101,8 +107,7 @@ class DataAnalyticsController extends Controller
         $barDataMonthExpenses = $dataMonthExpenses;
         $barDataYearExpenses = $dataYearExpenses;
 
-        return view('admin.data-analytics.barChart',compact('barDataMonthSales','barDataYearSales','barDataMonthExpenses','barDataYearExpenses'));
+        return view('admin.data-analytics.barChart',compact('barDataMonthSales','barDataYearSales','barDataMonthExpenses',
+                    'barDataYearExpenses'));
     }
-
-
 }
