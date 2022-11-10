@@ -36,6 +36,7 @@ class FrontendController extends Controller
         $category= Category::where('categoryId',$categoryId)->first();
 
         if($category){
+            // $products = $category->products()->get();
             return view('frontend.collections.products.index',compact('category'));
 
         }else{
@@ -74,7 +75,7 @@ class FrontendController extends Controller
     {
         if($request->search)
         {
-            $searchProducts = Product::where('productName', 'LIKE', '%'.$request->search.'%')->latest()->get();
+            $searchProducts = Product::where('productName', 'LIKE', '%'.$request->search.'%')->latest()->paginate(5);
             return view('frontend.pages.search', compact('searchProducts'));
         }
         else
