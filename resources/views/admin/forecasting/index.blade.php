@@ -68,8 +68,8 @@
                 </div>
             </div>
             <div class="col-md-6 text-center m-auto">
-                <!-- <canvas id="myChart" height="500" width="800"></canvas> -->
-                <div id="chartContainer"></div>
+                <!-- <canvas id="chartContainer" height="500" width="800"></canvas> -->
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
             </div>
 
         </div>

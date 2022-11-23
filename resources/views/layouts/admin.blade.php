@@ -62,11 +62,9 @@
     <script src="{{asset('admin/js/off-canvas.js')}}"></script>
     <script src="{{asset('admin/js/hoverable-collapse.js')}}"></script>
     <script src="{{asset('admin/js/template.js')}}"></script>
-    <!-- <script src="{{asset('admin/js/dashboard.js')}}"></script> -->
     
     <!-- Script -->
     <script src="{{ asset('assets/js/jquery-3.6.1.min.js') }}"></script>
-    <!-- <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     
     
