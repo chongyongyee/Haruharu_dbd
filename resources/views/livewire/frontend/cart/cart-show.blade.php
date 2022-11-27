@@ -1,4 +1,4 @@
-<div>
+<div class="bg-light">
     <div class="py-3 py-md-5">
         <div class="container">
     
@@ -101,7 +101,7 @@
                     </h5>
                 </div>
                 <div class="col-md-4 mt-3">
-                    <div class="shadow-sm bg-white p-3">
+                    <div class="shadow-sm bg-light p-3">
                         <h5>Total:
                             <span class="float-end">RM {{ $totalPrice }}</span>
 

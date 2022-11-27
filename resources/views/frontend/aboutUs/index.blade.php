@@ -7,8 +7,8 @@
 <div class="bg-light">
   <div class="container">
     <div class="row">
-        <h4 class="mb-4 p-3">About Us</h4>
-      </div>
+      <h4 class="mb-4 p-3">About Us</h4>
+    </div>
 
       <img class="logoPic" src="{{ URL::to('/assets/img/IMG_5912.PNG') }}" alt="logo">
       <br>
@@ -21,9 +21,7 @@
             than wishing that every woman would gain their confidence while using Haruharu dbd</p>
       </div>
       <br>
-
-
-    </div>
+  </div>
 </div>
 
 

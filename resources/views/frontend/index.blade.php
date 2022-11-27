@@ -24,7 +24,7 @@
                         </p>
                         <div>
                             <a href="{{ url('/collections') }}" class="btn btn-slider">
-                                Get Now
+                                Check Out More
                             </a>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
 </div>
 
 
-<div class="py-5 bg-white">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="row content-justify-center">
             <div class="col-md-12 text-center">
@@ -59,7 +59,7 @@
 </div>
 
 <!-- trending product -->
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="row">
         <div class="col-md-12">
@@ -116,7 +116,7 @@
 </div>
 
 <!-- New arrival -->
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="row">
         <div class="col-md-12">

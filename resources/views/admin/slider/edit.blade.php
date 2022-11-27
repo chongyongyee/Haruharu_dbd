@@ -27,6 +27,7 @@
                     <div class="mb-3">
                         <label>Description</label>
                         <textarea name ="description" class="form-control" rows="3">{{ $slider->description}}</textarea>
+                        @error('description')<small class="text-danger">{{ ($message) }} </small>@enderror
                     </div>
 
                     <div class="mb-3">

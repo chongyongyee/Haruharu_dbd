@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="py-5">
+<div class="py-5 bg-light">
     <div class="container">
         <div class="row">
         <div class="col-md-12">
@@ -56,12 +56,9 @@
                 <a href="{{ url('collections') }}" class="btn btn-warning px-3">View More</a>
             </div>
         
-                
-            
         
         </div>
     </div>
 </div>
-
 
 @endsection

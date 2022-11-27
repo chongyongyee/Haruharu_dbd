@@ -1,5 +1,5 @@
 
-    <div>
+    <div class="pt-3 bg-light">
         <div class="footer-area">
             <div class="container">
                 <div class="row">
