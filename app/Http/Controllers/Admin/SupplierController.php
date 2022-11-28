@@ -28,7 +28,7 @@ class SupplierController extends Controller
         $suppliers->supplierName =$validatedData['name'];
         $suppliers->supplierProduct =$validatedData['product'];
         $suppliers->cost =$validatedData['cost'];
-        $suppliers->cost =$validatedData['phone'];
+        $suppliers->phone =$validatedData['phone'];
         $suppliers->date =$validatedData['date'];
 
         $suppliers->save();
@@ -52,7 +52,7 @@ class SupplierController extends Controller
         $suppliers->supplierName =$validatedData['name'];
         $suppliers->supplierProduct =$validatedData['product'];
         $suppliers->cost =$validatedData['cost'];
-        $suppliers->cost =$validatedData['phone'];
+        $suppliers->phone =$validatedData['phone'];
         $suppliers->date =$validatedData['date'];
 
         $suppliers->update();

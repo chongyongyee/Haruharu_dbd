@@ -19,7 +19,7 @@ class ReportController extends Controller
 
     public function __construct()
     {
-        $this->OrderItem = new OrderItem; // or make your query here
+        $this->OrderItem = new OrderItem; 
     }
 
     public function businessIndex()
@@ -86,22 +86,6 @@ class ReportController extends Controller
 
     }
 
-    // public function viewBusinessReport()
-    // {
-    //     $expenses = Expenses::get();
-    //     $orders = Order::with([ 'orderItems', 'orderItems.product'])
-    //         ->withCount('orderItems')
-    //         ->withWhereHas('orderItems', function($query){
-    //             $query->whereHas('product', function ($query) {
-    //             });
-    //         })
-    //         ->Where('status_message', 'completed')
-    //         ->orderBy('updated_at','desc')
-    //         ->get();
-    //     $Sales = $this->OrderItem->sales();
-    //     return view('admin.report.businessReport', compact('expenses','orders','Sales'));
-
-    // }
 
     public function stockIndex()
     {

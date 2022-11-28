@@ -36,20 +36,10 @@
             margin-bottom: 12px;
             font-family: sans-serif;
         }
-        .small-heading {
-            font-size: 18px;
-            font-family: sans-serif;
-        }
         .total-heading {
             font-size: 18px;
             font-weight: 700;
             font-family: sans-serif;
-        }
-        .order-details tbody tr td:nth-child(1) {
-            width: 20%;
-        }
-        .order-details tbody tr td:nth-child(3) {
-            width: 20%;
         }
 
         .text-start {
@@ -61,13 +51,7 @@
         .text-center {
             text-align: center;
         }
-        .company-data span {
-            margin-bottom: 4px;
-            display: inline-block;
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-        }
+        
         .no-border {
             border: 1px solid #fff !important;
         }
@@ -83,7 +67,7 @@
         <thead>
         <tr>
             <th class="no-border text-start heading" colspan="4">
-                Stock Report
+                Business Report
             </th>
         </tr>
         <tr class="bg-blue">
@@ -123,38 +107,42 @@
                 <td class="cp" >{{$price}}</td>
             </tr>
         @empty
-            @include('layouts.__partials.no-data')
+            <tr>
+                <td colspan="7">No Sales Records</td>
+            </tr> 
         @endforelse
         </tbody>
     </table>
 
     <table>
         <thead>
-        <tr>
-            <th class="no-border text-start heading" colspan="4">
-                Expenses Report
-            </th>
-        </tr>
-        <tr class="bg-blue">
-            <th>ID</th>
-            <th>Expenses</th>
-            <th>Cost</th>
-            <th>Date</th>
-        </tr>
+            <tr>
+                <th class="no-border text-start heading" colspan="4">
+                    Expenses Report
+                </th>
+            </tr>
+            
+            <tr class="bg-blue">
+                <th>ID</th>
+                <th>Expenses</th>
+                <th>Cost</th>
+                <th>Date</th>
+            </tr>
         </thead>
+
         <tbody>
-        @forelse ($expenses as $row)
-            <tr>
-                <td>{{ $row->expensesId}}</td>
-                <td>{{ $row->expensesName}}</td>
-                <td>RM {{ $row->cost, $precision = 8, $scale = 2}}</td>
-                <td>{{ $row->date}}</td>
-            </tr>
-        @empty
-            <tr>
-                <td colspan="4">No Expenses Records</td>
-            </tr>
-        @endforelse
+            @forelse ($expenses as $row)
+                <tr>
+                    <td>{{ $row->expensesId}}</td>
+                    <td>{{ $row->expensesName}}</td>
+                    <td>RM {{ $row->cost, $precision = 8, $scale = 2}}</td>
+                    <td>{{ $row->date}}</td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="4">No Expenses Records</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 

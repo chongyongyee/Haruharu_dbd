@@ -41,7 +41,7 @@
         </tr>
     @empty
         <tr>
-            <td colspan="100%" class="text-center">No Data</td>
+            <td colspan="100%" class="text-center">No Sales Records</td>
         </tr>
     @endforelse
     </tbody>
@@ -69,10 +69,11 @@
             </tr>
         @empty
             <tr>
-                <td colspan="4">No Expenses Records</td>
+                <td colspan="100%" class="text-center">No Expenses Records</td>
             </tr>
         @endforelse
 
         </tbody>
 
-    </table>
+</table>
+

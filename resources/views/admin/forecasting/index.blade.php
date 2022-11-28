@@ -77,15 +77,12 @@
     </div>
 </div>
 @push('script')
-    <!-- <script type="text/javascript">
-        {{--var Sales =  {{ Js::from($topProducts) }};--}}
-    </script> -->
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script type="text/javascript">
     </script>
     <script>
         $(document).ready(function () {
-            // loadGraph()
+            
         });
         $('.filterCategory,.filterTo,.filterFrom').on('change', function ()
         {
@@ -106,7 +103,6 @@
                 {
                     console.log(response);
                     $('#noOfSales').text(response);
-                    //loadGraph(response);
                 }
 
 
@@ -154,8 +150,8 @@
 
             $.each(years, function(index, value) {
 
+                // var sales = (Math.random() * parseInt(data)) + (1-Math.random())*(targetedSales);
                 var sales = (Math.random() * parseInt(data)) + (1-Math.random())*(targetedSales);
-                // var sales = (Math.random() * 10) + parseInt(targetedSales);
                 dataPointsnew.push({ x: new Date(value, 0), y: sales });
             });
 
@@ -166,12 +162,7 @@
                 },
                 axisY: {
                     title: "Sales",
-                    // valueFormatString: "#0,,.",
                     valueFormatString: "0",
-                    // stripLines: [{
-                    //     value: 50,
-                    //     label: "Average"
-                    // }]
                 },
                 axisX: {
                     title: "Year",

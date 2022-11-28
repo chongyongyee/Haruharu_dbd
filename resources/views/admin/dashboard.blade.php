@@ -137,7 +137,7 @@
         </div>
 
         <div class="charts-card">
-          <p class="chart-title">Sales Order</p>
+          <p class="chart-title">Sales Order Quantity</p>
           <div id="area-chart"></div>
         </div>
 

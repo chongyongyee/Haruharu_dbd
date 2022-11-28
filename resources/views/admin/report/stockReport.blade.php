@@ -30,15 +30,10 @@
             padding: 8px;
             font-size: 14px;
         }
-
         .heading {
             font-size: 24px;
             margin-top: 12px;
             margin-bottom: 12px;
-            font-family: sans-serif;
-        }
-        .small-heading {
-            font-size: 18px;
             font-family: sans-serif;
         }
         .total-heading {
@@ -46,13 +41,6 @@
             font-weight: 700;
             font-family: sans-serif;
         }
-        .order-details tbody tr td:nth-child(1) {
-            width: 20%;
-        }
-        .order-details tbody tr td:nth-child(3) {
-            width: 20%;
-        }
-
         .text-start {
             text-align: left;
         }
@@ -62,13 +50,7 @@
         .text-center {
             text-align: center;
         }
-        .company-data span {
-            margin-bottom: 4px;
-            display: inline-block;
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-        }
+      
         .no-border {
             border: 1px solid #fff !important;
         }

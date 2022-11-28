@@ -41,12 +41,9 @@
 
                     <div class="table-responsive mt-3">
                         <div id="table"></div>
+
                     </div>
-                        <tr>
-                            <td colspan="3" class="fw-bold">Total Earnings:</td>
-                            <td colspan="1" class="fw-bold">RM {{ $Sales.'.00'}}</td>
-                        </tr>
-                    </div>
+
                 </div>
             </div>
         </div>

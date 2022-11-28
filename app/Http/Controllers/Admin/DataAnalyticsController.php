@@ -76,6 +76,7 @@ class DataAnalyticsController extends Controller
                             from order_items GROUP BY month(updated_at) ORDER BY month(updated_at)"));
         $totalYearSales = DB::select(DB::raw("SELECT date_format(updated_at,'%Y') as year, sum(price) as price 
                             from order_items GROUP BY year(updated_at) ORDER BY year(updated_at)"));
+
         $totalMonthExpenses = DB::select(DB::raw("SELECT date_format(date,'%M') as month, sum(cost) as cost 
                             from expenses GROUP BY month(date) ORDER BY month(date)"));
         $totalYearExpenses = DB::select(DB::raw("SELECT date_format(date,'%Y') as year, sum(cost) as cost 
